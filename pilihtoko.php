@@ -9,30 +9,13 @@
             </div>
           </header>
                 <!-- Statistics -->
-                <div class="statistics col-lg-3 col-12">
-                  <div class="statistic d-flex align-items-center bg-white has-shadow">
-                    <div class="icon bg-red"><i class="icon-padnote"></i></div>
-                   <a href="jenisbarang.php" class="btn btn-primary">Pandaan 1</a>
-                  </div>
-				  <div class="statistic d-flex align-items-center bg-white has-shadow">
-                    <div class="icon bg-red"><i class="icon-padnote"></i></div>
-                    <a href="aturanimport.php"  class="btn btn-primary">Pandaan 2</a>
-                  </div>
-				  <div class="statistic d-flex align-items-center bg-white has-shadow">
-                    <div class="icon bg-red"><i class="icon-padnote"></i></div>
-                    <a href="#" class="btn btn-primary">Pandaan 3</a>
-                  </div>
-				  <div class="statistic d-flex align-items-center bg-white has-shadow">
-                    <div class="icon bg-red"><i class="icon-padnote"></i></div>
-                    <a href="#" class="btn btn-primary">Lawang 1</a>
-                  </div>
-				  <div class="statistic d-flex align-items-center bg-white has-shadow">
-                    <div class="icon bg-red"><i class="icon-padnote"></i></div>
-                    <a href="#" class="btn btn-primary">Lawang 2</a>
-                  </div>
-                          </div>
-                        
-                  
+                <div class="col-lg-12"> 
+               <a class="navbar-brand" href="baki.php"><img src="img/1.png" height="70" width="170" alt="logo"></a>
+               <a class="navbar-brand" href="baki.php"><img src="img/2.png" height="70" width="170" alt="logo"></a>
+               <a class="navbar-brand" href="baki.php"><img src="img/3.png" height="70" width="170" alt="logo"></a>
+               <a class="navbar-brand" href="baki.php"><img src="img/4.png" height="70" width="170" alt="logo"></a>
+			   <a class="navbar-brand" href="baki.php" ><img src="img/5.png" height="70" width="170" alt="logo"></a>
+			   <br><br><br><br><br><br><br><br><br><br></div>
 <?php 
 	include 'footer.php';
 ?>

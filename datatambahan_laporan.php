@@ -42,8 +42,8 @@
 							<td>2,5</td>
 							<td>gambar2</td>
 							<td>
-							<button type="submit" class="btn btn-success"><i class="fa fa-pencil"></i></button></td>
-							<td><button type="submit" class="btn btn-danger"><i class="fa fa-trash"></i></button>
+							<button type="submit" class="btn btn-success" colspan="2"><i class="fa fa-pencil"></i></button>
+							<button type="submit" class="btn btn-danger"><i class="fa fa-trash"></i></button>
                           </tr>
 						</tbody>
                       </table>
