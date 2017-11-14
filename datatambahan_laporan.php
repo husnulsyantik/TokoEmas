@@ -48,15 +48,17 @@
 						</tbody>
                       </table>
                     </div>
+					 
                         <div class="form-group row">
-                          <div class="col-sm-4 offset-sm-3"><button type="submit" class="btn btn-primary">Tambah</button>
-							<button type="submit" class="btn btn-danger">Cetak</button>
-                            
-                            <button type="submit" class="btn btn-secondari">Kembali</button>
+                          <div class="col-sm-4 offset-sm-3">
+						  <a href="#"><input type="button" value="&nbsp;Tambah&nbsp;" type="submit" class="btn btn-primary"></input></a>
+						  <a href="#"><input type="button" value="&nbsp;&nbsp;&nbsp;Cetak&nbsp;&nbsp;&nbsp;" type="submit" class="btn btn-danger"></input></a>
+						  <a href="baki.php"><input type="button" value="<<&nbsp;Kembali" type="submit" class="btn btn-secondary"></input></a>
                           </div>
-                         
+                        
 </div>						
           </section>
+		   <br><br><br>
 <?php 
 	include 'footer.php';
 ?>

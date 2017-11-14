@@ -120,13 +120,14 @@
              <li class="active"><a href="#dashvariants" aria-expanded="false" data-toggle="collapse"> <i class="fa fa-th-large"></i>Master Data </a>
               <ul id="dashvariants" class="collapse list-unstyled">
                 <li><a href="daftartambahan.php">Daftar Tambahan</a></li>
-                <li><a href="#">Sales</a></li>
+                <li><a href="sales2.php">Sales</a></li>
               </ul>
             </li>
 			  <li class=""> <a href=""><i class="fa fa-credit-card"></i>Transaksi</a></li>
             <li class=""> <a href=""><i class="fa fa-book"></i>Laporan</a></li>
             <li class=""> <a href=""><i class="fa fa-check"></i>Check Up</a></li>
             <li class=""> <a href=""><i class="fa fa-wrench"></i>Options</a></li> 
+			
           </ul>
         </nav>
         <div class="content-inner">

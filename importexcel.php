@@ -14,25 +14,28 @@
             <div class="container-fluid">
               <div class="row">
 <!-- Form Elements -->
-                  <div class="col-lg-12">
+                 <div class="col-lg-12">
                   <div class="card">
                     <div class="card-close">
-                   
+                     
                     </div>
-                  <div class="col-sm-5 form-control-label"> 
-                      <div><u class="h4">Pilih Sumber Data (Pilih File)</u>
-                      </div></div>
+					<div class="card-header d-flex align-items-center">
+                      <h3 class="h4">PILIH SUMBER DATA (PILIH FILE)</h3>
+                    </div>
                       <div class="card-body">
                       <form class="form-horizontal">
                         <div class="form-group row">
+						
                           <label class="col-sm-3 form-control-label">Sumber Data (File Excel)</label>
+						  
                           <div class="col-sm-6">
+						  
                             <input type="file" name="browse" class="form-control">
                           </div>
                         </div>
                           
                          
-                           <div class="line"></div>
+                          
                         <div class="form-group row">
                           <label class="col-sm-3 form-control-label">Pilih Work Sheet</label>
                           <div class="col-sm-6 select">
@@ -44,8 +47,7 @@
                             </select>
                           </div>
                         </div>
-                          
-                        <div class="line"></div>
+                        
                         <div class="form-group row">
                             <div class="col-sm-6">
                             <div>
@@ -59,9 +61,12 @@
                           
                         <div class="line"></div>
                         <div class="form-group row">
-                          <div class="col-sm-9 offset-sm-9">
-                            <button type="submit" class="btn btn-secondary">Kembali</button>
-                            <button type="submit" class="btn btn-primary">Import</button>
+                          <div class="col-sm-3 offset-sm-3">
+						  
+						   <a href="importdata.php"><input type="button" value="<<&nbsp;Kembali" type="submit" class="btn btn-secondary"></input></a>&nbsp;&nbsp;
+                            <a href="#"><input type="button" value="&nbsp;&nbsp;&nbsp;Import&nbsp;&nbsp;&nbsp;" type="submit" class="btn btn-primary"></input></a>
+							
+                            
                           </div>
                         </div>
                       </form>

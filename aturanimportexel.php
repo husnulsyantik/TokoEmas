@@ -8,15 +8,18 @@ include"header.php"
             <div class="container-fluid">
               <h2 class="no-margin-bottom">Aturan Import Excel</h2>
             </div>
-          </header><br/>
+          </header>
+		    <section class="forms"> 
+            <div class="container-fluid">
+              <div class="row">
           <!-- Form Elements -->
                 <div class="col-lg-12">
                   <div class="card">
                    
                     <div class="card-header d-flex align-items-center">
-                      <u class="h4">Informasi Penting</u>
+                       <h3 class="h4">Informasi Penting</h3>
                     </div>
-                      <div class="col-lg-12">
+                      <div class="col-lg-12"><br>
                       <p>Beberapa hal yang perlu diketahui sebelum melakukan import data dari Excel : </p>
                       <p>1. Di komputer anda harus sudah di install Microsoft Excel</p>
                       <p>2. Data yang dapat diimport hanya untuk item Jasa/Barang</p>
@@ -27,19 +30,21 @@ include"header.php"
                       <p>   - Stempel</p>
                       <p>   - Pj/Diameter Barang</p>
                       <p>   - Total Berat</p>
-                      <p>urutan untuk kolom-kolom di atas juga harus sama</p>
-                    <div class="line"></div>
-                        <div class="form-group row">
-                          <div class="col-sm-9 offset-sm-9">
-                            <button type="submit" class="btn btn-secondary">Kembali</button>
-                            <button type="submit" class="btn btn-primary">Lanjut</button>
+                      <p>Urutan untuk kolom-kolom di atas juga harus sama</p><br><br>
+					  
+					  
+                   
+                     <div class="form-group row">
+                          <div class="col-sm-8 offset-sm-8">
+                           				  
+						   <a href="#"><input type="button" value="<< Kembali" type="submit" class="btn btn-secondary"></input></a>&nbsp;&nbsp;
+                            <a href="#"><input type="button" value="&nbsp;&nbsp;Lanjut >>&nbsp;&nbsp;" type="submit" class="btn btn-primary"></input></a>
+						
                           </div>
+						  
                         </div> 
                       </div>
-                  </div>
-               
-                
-                     </div>
+                  
               </div>
             </div>
             </section>

@@ -29,7 +29,7 @@
                         <div class="line"></div>
                         <div class="form-group row">
                           <label class="col-sm-3 form-control-label">Silahkan Pilih</label>
-                          <div class="col-sm-9 select">
+                          <div class="col-sm-6 select">
                             <select name="account" class="form-control">
                               <option>1A</option>
 							   <option>2A</option>
@@ -45,7 +45,7 @@
                       
                         <div class="line"></div>
                         <div class="form-group row">
-                          <div class="col-sm-8 offset-sm-8">
+                          <div class="col-sm-4 offset-sm-3">
 						  <a href="jenisbarang.php"><input type="button" value="<<&nbsp;Kembali" type="submit" class="btn btn-secondary"></input></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             <a href="datatambahan_laporan.php"><input type="button" value="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ok&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" type="submit" class="btn btn-primary"></input></a>
 						  </div>
@@ -59,6 +59,7 @@
               
 			
           </section>
+		  
           <?php 
 	include 'footer.php';
     

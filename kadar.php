@@ -29,7 +29,7 @@
                         <div class="line"></div>
                         <div class="form-group row">
                           <label class="col-sm-3 form-control-label">Silahkan Pilih</label>
-                          <div class="col-sm-9 select">
+                          <div class="col-sm-6 select">
                             <select name="account" class="form-control">
                               <option>BM</option>
                               <option>CTK</option>

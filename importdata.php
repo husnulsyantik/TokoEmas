@@ -23,13 +23,13 @@
                       <h3 class="h4">Pilih Data yang akan di Import</h3>
                     </div>
 					 <div class="card-body">
-					 <p>Pilih Data yang aka di Import lalu tekan Tombol Lanjut<p>
+					 <p>Pilih Data yang akan di Import lalu tekan Tombol Lanjut<p>
                       <form class="form-horizontal">
                                             
                         <div class="line"></div>
                         <div class="form-group row">
                           <label class="col-sm-3 form-control-label">Silahkan Pilih</label>
-                          <div class="col-sm-9 select">
+                          <div class="col-sm-6 select">
                             <select name="account" class="form-control">
                               <option>Pejualan 5.0</option>
 							   <option>Penjualan 5.5</option>
@@ -42,9 +42,10 @@
                         <div class="line"></div>
                         <div class="form-group row">
                           <div class="col-sm-4 offset-sm-3">
-                              <button type="submit" class="btn btn-secondary">&nbsp;&nbsp;&nbsp;&nbsp;Batal&nbsp;&nbsp;&nbsp;&nbsp;</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            <button type="submit" class="btn btn-primary">&nbsp;&nbsp;Lanjut&nbsp;>>&nbsp;&nbsp;</button>
-                          </div>
+						  
+						   <a href="daftartambahan.php"><input type="button" value="&nbsp;&nbsp;&nbsp;&nbsp;Batal&nbsp;&nbsp;&nbsp;&nbsp;" type="submit" class="btn btn-secondary"></input></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <a href="importexcel.php"><input type="button" value="&nbsp;&nbsp;Lanjut&nbsp;>>&nbsp;&nbsp;" type="submit" class="btn btn-primary"></input></a>
+						</div>
 						    </div>
 							</div>
                         </div>

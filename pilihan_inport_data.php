@@ -6,14 +6,7 @@
               <h2 class="no-margin-bottom">import Data</h2>
             </div>
           </header>
-          <!-- Breadcrumb-->
-          <div class="breadcrumb-holder container-fluid">
-            <ul class="breadcrumb">
-              <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-              <li class="breadcrumb-item active">Pilihan Import Data</li>
-            </ul>
-          </div> 
-            <!-- form import data-->
+          <!-- form import data-->
              <section class="forms"> 
             <div class="container-fluid">
               <div class="row">
@@ -22,9 +15,9 @@
                   <div class="card">
                    
                     <div class="card-header d-flex align-items-center">
-                      <u class="h4">Pilihan Import Data</u>
+                       <h3 class="h4">Pilihan Import Data</h3>
                     </div>
-                      <div class="col-lg-12">
+                      <div class="col-lg-12"><br>
                       <p>Program penjualan dan stok barang versi 6.0 menyediakan fasilitas import data dari Microsoft Excel</p> 
                       <p>dan program penjualan versi 5.0/5.5. Fasilitas ini akan memberikan kemudahan untuk anda </p>
                       <p>apabila akan melakukan upgrade dari sistem Excel atau Program versi sebelumnya.</p>
@@ -47,9 +40,11 @@
                         
                     <div class="line"></div>
                         <div class="form-group row">
-                          <div class="col-sm-9 offset-sm-9">
-                            <button type="submit" class="btn btn-secondary">Batal</button>
-                            <button type="submit" class="btn btn-primary">Ok</button>
+                           <div class="col-sm-8 offset-sm-8">
+                           				  
+						   <a href="#"><input type="button" value="Batal" type="submit" class="btn btn-secondary"></input></a>&nbsp;&nbsp;
+                            <a href="#"><input type="button" value="&nbsp;&nbsp;&nbsp;Ok&nbsp;&nbsp;&nbsp;" type="submit" class="btn btn-primary"></input></a>
+						
                           </div>
                         </div> 
                       </div>
