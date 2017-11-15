@@ -121,6 +121,7 @@
               <ul id="dashvariants" class="collapse list-unstyled">
                 <li><a href="daftartambahan.php">Daftar Tambahan</a></li>
                 <li><a href="sales2.php">Sales</a></li>
+                <li><a href="databarang.php">Data Barang</a></li>
               </ul>
             </li>
 			  <li class=""> <a href=""><i class="fa fa-credit-card"></i>Transaksi</a></li>
