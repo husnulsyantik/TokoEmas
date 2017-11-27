@@ -12,55 +12,21 @@ include"header.php"
             <div class="container-fluid">
               <div class="row bg-white has-shadow">
                 <!-- Item -->
-                <div class="col-xl-6 col-sm-6">
-                    
-                        <form>
-                             <div class="form-group">
-                                <label class="form-control-label">Kode</label>
-                                    <input type="text" placeholder="Entri Kode" class="form-control">
-                            </div>
-                             <div class="form-group">
-                                <label class="form-control-label">Nama</label>
-                                    <input type="text" placeholder="Entri Nama" class="form-control">
-                            </div>
-                            <div class="form-group">
-                                <label class="form-control-label">Alamat</label>
-                                    <input type="text" placeholder="Entri Alamat" class="form-control">
-                            </div>
-                            <div class="form-group">       
-                                 <label class="form-control-label">Urut Berdasarkan</label>
-                                      <input type="text" placeholder="urut" class="form-control">
-                            </div>
-                           
-                        </form>
-                     </div>
+                
                   
-                  <div class="col-xl-6 col-sm-6">
-                        <div class="col-md-30">
-                        <form>
-                             <div class="form-group">
-                                <label class="form-control-label">Kota</label>
-                                    <input type="text" placeholder="Entri Kota" class="form-control">
-                            </div>
-                            <div class="form-group">
-                                <label class="form-control-label">Telpon</label>
-                                <input type="number" placeholder="Entri telpon" class="form-control">
-                            </div>
-                            <div class="form-group">       
-                                <label class="form-control-label">Aktif</label>
-                           <select placeholder="Aktif" class="form-control">
-                              <option>Aktif</option>
-                              <option>Tidak Aktif</option>
-                              
-                            </select>
-                            
-                            </div>
-                        
-                      </form>
-                        </div>
-                  
-              
-                  </div>
+                 
+                  <div class="col-lg-12">
+                  <form class="form-horizontal">
+				 <div class="form-group">
+				   <div class="col-sm-5 offset-sm-6">
+                          <div class="input-group">
+                            <input type="text" class="form-control"><span class="input-group-btn">
+                              <button type="button" class="btn btn-primary">Search</button></span>
+                          </div>
+							</div>
+						
+                      </div>
+                      </form></div>
                   
                     <div class="card-body">
                       <table class="table table-striped table-hover">
@@ -76,6 +42,7 @@ include"header.php"
                           </tr>
                         </thead>
                         <tbody>
+                           
                           <tr>
                             <th scope="row">1</th>
                             <td>PA1</td>
@@ -86,16 +53,84 @@ include"header.php"
                             <td>Aktif</td>
                             
                           </tr>
+                            
                          
                         </tbody>
+                          
                           
                       </table>
                          <div class="line"></div>
                         <div class="form-group row">
                           <div class="col-sm-4 offset-sm-3">
-                            <a href="sales1.php"><button type="submit" class="btn btn-primary">Tambah</button></a>
-                            <button type="submit" class="btn btn-xs">Edit</button>
+                           <button type="button" data-toggle="modal" data-target="#myModal" class="btn btn-primary">Tambah </button>&nbsp;&nbsp;
+                            <button type="submit" class="btn btn-xs">Edit</button>&nbsp;&nbsp;
                             <button type="submit" class="btn btn-secondary">Hapus</button>
+                              <!-- Modal-->
+                      <div id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" class="modal fade text-left">
+                        <div role="document" class="modal-dialog modal-lg">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h4 id="exampleModalLabel" class="modal-title">Tambah Data Sales</h4>
+                              <button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true">×</span></button>
+                            </div>
+                            <div class="modal-body">
+                              <form class="form-horizontal"> <!-- pembuatan form -->
+                    <div class="form-group row">
+                      <label class="col-sm-3 form-control-label">Kode </label> <!-- pembuatan label form -->
+                      <div class="col-sm-6">
+                        <input type="text" name="kode" class="form-control form-control-success"> <!-- pembuatan inputan form -->
+                      </div>
+                    </div>
+                      <div class="form-group row">
+                      <label class="col-sm-3 form-control-label">Nama </label>
+                      <div class="col-sm-6">
+                        <input type="text" name="nama" class="form-control form-control-success">
+                      </div>
+                    </div>
+                      <div class="form-group row">
+                      <label class="col-sm-3 form-control-label">Alamat </label>
+                      <div class="col-sm-6">
+                        <textarea type="text" name="alamat" class="form-control form-control-success"></textarea>
+                      </div>
+                    </div>
+                      <div class="form-group row">
+                      <label class="col-sm-3 form-control-label">Kota </label>
+                      <div class="col-sm-6">
+                        <input type="text" name="kota" class="form-control form-control-success">
+                      </div>
+                    </div>
+                      <div class="form-group row">
+                      <label class="col-sm-3 form-control-label">Telephone </label>
+                      <div class="col-sm-6">
+                        <input type="number" name="telp" class="form-control form-control-success">
+                      </div>
+                    </div>
+                      <div class="form-group row">
+                      <label class="col-sm-3 form-control-label">Default </label>
+                      <div class="col-sm-6">
+                        <input type="text" name="default" class="form-control form-control-success">
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <label class="col-sm-3 form-control-label">Status </label>
+                      <div class="col-sm-6">
+                        <input type="text" name="status" class="form-control form-control-warning">
+                      </div>
+                    </div>
+					  
+                     
+                  </form>
+                            </div>
+                            <div class="modal-footer">
+                              <button type="button" data-dismiss="modal" class="btn btn-secondary">Close</button>
+                                <a href="sales2.php"><button type="button" class="btn btn-primary">Save changes</button></a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
                           </div>
                         </div>
                     </div>
