@@ -110,7 +110,7 @@
         <nav class="side-navbar">
           <!-- Sidebar Header-->
           <div class="sidebar-header d-flex align-items-center">
-            <div class="avatar"><img src="img/avatar-3.jpg" alt="..." class="img-fluid rounded-circle"></div>
+            <div class="avatar"><img src="../img/avatar-3.jpg" alt="..." class="img-fluid rounded-circle"></div>
             <div class="title">
               <h1 class="h4">Husnul Hotimah</h1>
               <p>Kasir</p>
