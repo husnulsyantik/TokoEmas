@@ -24,7 +24,8 @@
                     </div>
 					 <div class="card-body">
 					 <p>Memasukkan kode barang, berat timbangan, kadar dan harga.<p>
-                      <form class="form-horizontal">
+                         
+                      <form class="form-horizontal" name="trans">
                                             
                         <div class="line"></div>
                        <div class="form-group row">
@@ -56,19 +57,28 @@
                               </select>
                           </div>
                             </div>
-                          <div class="form-group row">
+                        <div class="form-group row">
                           <label class="col-sm-3 form-control-label">Harga</label>
                           <div class="col-sm-3 select">
-                            <input id="option" type="checkbox" value="">
-                              <label for="option">Harga sesuai harga toko</label>
+                            <input id="htoko" type="radio" value="" name="htoko">
+                            <label for="option">Harga sesuai harga toko</label>
                           </div>
-                               <div class="col-sm-3">
-                        <input type="text" name="berat" class="form-control form-control-success">
-                      </div>
-                            </div>
-                   
+                          <div class="col-sm-3">
+                             <input type="text" name="berat" class="form-control form-control-success" value="Rp.500.000" id="toko">
+                          </div>
+                        </div>
                           
-                      
+                        <div class="form-group row">
+                          <label class="col-sm-3 form-control-label"></label>
+                          <div class="col-sm-3 select">
+                            <input id="htawar" type="radio" name="htawar">
+                            <label for="option">Harga Tawaran</label>
+                          </div>
+                          <div class="col-sm-3">
+                             <input type="text" name="berat" class="form-control form-control-success" id="tawar">
+                          </div>
+                        </div>
+     
                         <div class="line"></div>
                         <div class="form-group row">
                           <div class="col-sm-4 offset-sm-3">
@@ -77,6 +87,17 @@
                           </div> 
                       </div>
                          </form>
+                         
+                         <script>
+                            $('#htoko').click(function(){
+                                $('#tawar').prop('disabled',true);
+                                $('#toko').prop('disabled',false);
+                            })
+                            $('#htawar').click(function(){
+                                $('#tawar').prop('disabled',false);
+                                $('#toko').prop('disabled',true);
+                            })
+                        </script>
 							</div>
                         </div>
                 </div>
