@@ -42,7 +42,7 @@
 							<td>2,5</td>
 							<td>gambar2</td>
 							<td>
-							<button type="submit" class="btn btn-success" colspan="2"><i class="fa fa-pencil"></i></button>&nbsp;&nbsp;
+							<button type="submit" class="btn btn-success" colspan="2"><i class="fa fa-pencil"></i></button>
 							<button type="submit" class="btn btn-danger"><i class="fa fa-trash"></i></button>
                           </tr>
 						</tbody>
@@ -51,8 +51,8 @@
 					 
                         <div class="form-group row">
                           <div class="col-sm-4 offset-sm-3">
-						  <a href="#"><input type="button" value="&nbsp;Tambah&nbsp;" type="submit" class="btn btn-primary"></input></a>&nbsp;
-						  <a href="#"><input type="button" value="&nbsp;&nbsp;&nbsp;Cetak&nbsp;&nbsp;&nbsp;" type="submit" class="btn btn-danger"></input></a>&nbsp;
+						  <a href="#"><input type="button" value="&nbsp;Tambah&nbsp;" type="submit" class="btn btn-primary"></input></a>
+						  <a href="#"><input type="button" value="&nbsp;&nbsp;&nbsp;Cetak&nbsp;&nbsp;&nbsp;" type="submit" class="btn btn-danger"></input></a>
 						  <a href="baki.php"><input type="button" value="<<&nbsp;Kembali" type="submit" class="btn btn-secondary"></input></a>
                           </div>
                         

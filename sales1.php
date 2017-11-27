@@ -66,8 +66,8 @@
 					  
                         <div class="line"></div>
                     <div class="col-sm-4 offset-sm-3">
-                     <a href="sales2.php"> <input type="button" value="Simpan" class="btn btn-primary"> </a><!-- pembuatan button submit form-->&nbsp;&nbsp;
-                      <a href="#"><input type="button" type="submit" class="btn btn-secondary"value="&nbsp;Batal&nbsp;"></a><!-- pembuatan button jika ingin membatalkan form -->&nbsp;&nbsp;
+                     <a href="sales2.php"> <input type="button" value="Simpan" class="btn btn-primary"> </a><!-- pembuatan button submit form-->&nbsp;
+                      <a href="#"><input type="button" type="submit" class="btn btn-secondary"value="&nbsp;Batal&nbsp;"></a><!-- pembuatan button jika ingin membatalkan form -->&nbsp;
                       <a href="sales2.php"><input type="button" class="btn btn-danger" value="&nbsp;Tutup&nbsp;"></a><!-- pembuatan button jika ingin menutup form -->
                     </div>
                   </form>

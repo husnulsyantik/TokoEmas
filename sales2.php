@@ -93,8 +93,8 @@ include"header.php"
                          <div class="line"></div>
                         <div class="form-group row">
                           <div class="col-sm-4 offset-sm-3">
-                            <a href="sales1.php"><button type="submit" class="btn btn-primary">Tambah</button></a>&nbsp;&nbsp;
-                            <button type="submit" class="btn btn-xs">Edit</button>&nbsp;&nbsp;
+                            <a href="sales1.php"><button type="submit" class="btn btn-primary">Tambah</button></a>
+                            <button type="submit" class="btn btn-xs">Edit</button>
                             <button type="submit" class="btn btn-secondary">Hapus</button>
                           </div>
                         </div>

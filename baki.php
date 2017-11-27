@@ -46,7 +46,7 @@
                         <div class="line"></div>
                         <div class="form-group row">
                           <div class="col-sm-4 offset-sm-3">
-						  <a href="jenisbarang.php"><input type="button" value="<<&nbsp;Kembali" type="submit" class="btn btn-secondary"></input></a>&nbsp;&nbsp;
+						  <a href="jenisbarang.php"><input type="button" value="<<&nbsp;Kembali" type="submit" class="btn btn-secondary"></input></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             <a href="datatambahan_laporan.php"><input type="button" value="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ok&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" type="submit" class="btn btn-primary"></input></a>
 						  </div>
 						    </div>

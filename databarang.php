@@ -1,5 +1,8 @@
 <?php
+	include 'koneksi.php';
+
     include 'header.php';
+	
 ?>
           <!-- Page Header-->
           <header class="page-header">
@@ -24,53 +27,78 @@
                     <div class="form-group row">
                       <label class="col-sm-3 form-control-label">Id Barang </label> <!-- pembuatan label form -->
                       <div class="col-sm-6">
-                        <input type="text" name="kode" class="form-control form-control-success"> <!-- pembuatan inputan form -->
+                        <input type="text" name="idBarang" class="form-control form-control-success"> <!-- pembuatan inputan form -->
                       </div>
                     </div>
                       <div class="form-group row">
                       <label class="col-sm-3 form-control-label">Nama Barang </label>
                       <div class="col-sm-6">
-                        <input type="text" name="nama" class="form-control form-control-success">
+                        <input type="text" name="nama_barang" class="form-control form-control-success">
                       </div>
                     </div>
-                          <div class="form-group row">
-                          <label class="col-sm-3 form-control-label">Jenis Barang</label>
-                          <div class="col-sm-6 select">
-                            <select name="account" class="form-control">
-                              <option>A</option>
-                              <option>B</option>
-                              <option>BC</option>
-							  <option>BA</option>
-                              <option>BL</option>
-                              <option>C</option>
-							  <option>D</option>
-							  <option>E</option>
-                              <option>F</option>
-                              </select>
-                          </div>
-                            </div>
+                         
                      <div class="form-group row">
                           <label class="col-sm-3 form-control-label">Kadar</label>
                           <div class="col-sm-6 select">
-                            <select name="account" class="form-control">
-                              <option>BM</option>
-							   <option>CTK</option>
-							    <option>AYU</option>
-								</select>
+                         <select name="id_jenisbarang" id="id_jenisbarang" class="form-control">
+						<option value="">--Pilih Kadar Barang--</option>
+							<?php
+						
+						$kadar1=mysqli_query($conn,"SELECT * FROM kadar order by nama_jenis_barang");
+						while ($kadar2=mysqli_fetch_array($kadar1))
+						{
+							if($kadar2['id_jenisbarang']==$_POST['id_jenisbarang'])
+							{
+								echo "<option value=$kadar2[id_jenisbarang] selected>$kadar2[kode] ($kadar2[kadar_persen])% </option>";
+								}
+								else
+								echo "<option value=$kadar2[id_jenisbarang]>$kadar2[kode] ($kadar2[kadar_persen])%</option>";
+								}
+						?>
+						  </select>
                           </div>
                             </div>
-                      
+                       <div class="form-group row">
+                          <label class="col-sm-3 form-control-label">Jenis Barang</label>
+                          <div class="col-sm-6 select">
+                            <select name="id_jenisbarang" id="id_jenisbarang" class="form-control">
+						<option value="">--Pilih Jenis Barang--</option>
+							<?php
+						
+						$kadar1=mysqli_query($conn,"SELECT * FROM jenis_barang order by nama_jenis_barang");
+						while ($jenis2=mysqli_fetch_array($kadar1))
+						{
+							if($jenis2['id_jenisbarang']==$_POST['id_jenisbarang'])
+							{
+								echo "<option value=$jenis2[id_jenisbarang] selected>$jenis2[singkatan] ($jenis2[nama_jenis_barang]) </option>";
+								}
+								else
+								echo "<option value=$jenis2[id_jenisbarang]>$jenis2[singkatan]($jenis2[nama_jenis_barang])</option>";
+								}
+						?>
+						  </select>
+                          </div>
+                            </div>
                       <div class="form-group row">
                           <label class="col-sm-3 form-control-label">Baki</label>
                           <div class="col-sm-6 select">
-                            <select name="account" class="form-control">
-                              <option>1A</option>
-							   <option>2A</option>
-							    <option>1B</option>
-                                <option>1BC</option>
-                                <option>dst..</option>
-								</select>
-                          </div>
+						   <select name="idBaki" id="idBaki" class="form-control">
+						<option value="">--Pilih Baki--</option>
+                            	<?php
+						
+						$baki1=mysqli_query($conn,"SELECT * FROM baki");
+						while ($baki2=mysqli_fetch_array($baki1))
+						{
+							if($baki2['idBaki']==$_POST['idBaki'])
+							{
+								echo "<option value=$baki2[idBaki] selected>$baki2[idBaki] </option>";
+								}
+								else
+								echo "<option value=$baki2[idBaki]>$baki2[idBaki] </option>";
+								}
+						?>
+						  </select>
+						  </div>
                             </div>
                       <div class="form-group row">
                       <label class="col-sm-3 form-control-label">Berat</label>

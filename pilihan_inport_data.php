@@ -42,8 +42,8 @@
                         <div class="form-group row">
                            <div class="col-sm-8 offset-sm-8">
                            				  
-						   <a href="#"><input type="button" value="Batal" type="submit" class="btn btn-secondary"></input></a>&nbsp;&nbsp;
-                            <a href="#"><input type="button" value="&nbsp;&nbsp;&nbsp;Ok&nbsp;&nbsp;&nbsp;" type="submit" class="btn btn-primary"></input></a>
+						   <a href="daftartambahan.php"><input type="button" value="Batal" type="submit" class="btn btn-secondary"></input></a>&nbsp;&nbsp;
+                            <a href="importexcel.php"><input type="button" value="&nbsp;&nbsp;&nbsp;Ok&nbsp;&nbsp;&nbsp;" type="submit" class="btn btn-primary"></input></a>
 						
                           </div>
                         </div> 

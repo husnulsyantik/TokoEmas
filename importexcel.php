@@ -63,7 +63,7 @@
                         <div class="form-group row">
                           <div class="col-sm-3 offset-sm-3">
 						  
-						   <a href="importdata.php"><input type="button" value="<<&nbsp;Kembali" type="submit" class="btn btn-secondary"></input></a>&nbsp;&nbsp;
+						   <a href="pilihan_inport_data.php"><input type="button" value="<<&nbsp;Kembali" type="submit" class="btn btn-secondary"></input></a>&nbsp;&nbsp;
                             <a href="#"><input type="button" value="&nbsp;&nbsp;&nbsp;Import&nbsp;&nbsp;&nbsp;" type="submit" class="btn btn-primary"></input></a>
 							
                             

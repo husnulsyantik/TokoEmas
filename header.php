@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Bootstrap Material Admin by Bootstrapious.com</title>
+    <title>Sistem Informasi Toko Bumimas</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="all,follow">
@@ -24,6 +24,7 @@
     <!-- Tweaks for older IEs--><!--[if lt IE 9]>
         <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
         <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+		<script src="vendor/jquery/jquery.js"></script>
   </head>
   <body>
     <div class="page form-page">
@@ -117,29 +118,24 @@
           </div>
           <!-- Sidebar Navidation Menus--><span class="heading">Main</span>
           <ul class="list-unstyled">
-             <li><a href="#dashvariants" aria-expanded="false" data-toggle="collapse"> <i class="fa fa-th-large"></i>Master Data </a>
+             <li class="active"><a href="#dashvariants" aria-expanded="false" data-toggle="collapse"> <i class="fa fa-th-large"></i>Master Data </a>
               <ul id="dashvariants" class="collapse list-unstyled">
+			  
                 <li><a href="daftartambahan.php">Daftar Tambahan</a></li>
                 <li><a href="sales2.php">Sales</a></li>
-                <li><a href="databarang.php">Data Barang</a></li>
+				<li><a href="databarang.php">Input data</a></li>
               </ul>
             </li>
-			  <li class="actives"><a href="#dashvariants2" aria-expanded="false" data-toggle="collapse"> <i class="fa fa-credit-card"></i>Transaksi </a>
-              <ul id="dashvariants2" class="collapse list-unstyled">
-                <li class="active"><a href="pengeluaran1.php">Pengeluaran</a></li>
-                <li><a href="penjualan1.php">Penjualan</a></li>
-                <li><a href="pinjam1.php">Pinjam</a></li>
-                <li><a href="reparasi.php">Reparasi</a></li>
-                <li><a href="cuci.php">Cuci</a></li>
-              </ul>
-            </li>
+			  <li class=""> <a href="penjualan1.php"><i class="fa fa-credit-card"></i>Transaksi</a></li>
             <li class=""> <a href=""><i class="fa fa-book"></i>Laporan</a></li>
             <li class=""> <a href=""><i class="fa fa-check"></i>Check Up</a></li>
             <li class=""> <a href=""><i class="fa fa-wrench"></i>Options</a></li> 
 			
           </ul>
         </nav>
+		   
         <div class="content-inner">
-                   
+                
    
- 
+  </body>
+</html>

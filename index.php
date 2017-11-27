@@ -23,9 +23,9 @@
 					 
                      
 
-                    <center> Visi</center><br>
+                   <h1> <strong><center> Visi</center><br></strong></h1>
                     <p> Menjadi toko emas yang terbaik dan terpercaya yang selalu mengutamakan kualitas produk dan pelayanan yang ramah, jujur dan cepat.</p><br>
-                    <center> Misi</center><br>  
+                    <h1> <strong><center> Misi</center><br></strong></h1>  
                     <p>1. Menyediakan produk yang terbaik dan model-model terbaru</p>
                     <p>2. Menjamin kepuasan pelanggan dengan pelayanan yang diberikan</p>
                     <p>3. Perbaikan yang berkelanjutan</p>

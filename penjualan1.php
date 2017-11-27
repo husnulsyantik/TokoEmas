@@ -60,7 +60,7 @@
                         <div class="form-group row">
                           <label class="col-sm-3 form-control-label">Harga</label>
                           <div class="col-sm-3 select">
-                            <input id="htoko" type="radio" value="" name="htoko">
+                            <input id="htoko" type="radio" value="" name="harga">
                             <label for="option">Harga sesuai harga toko</label>
                           </div>
                           <div class="col-sm-3">
@@ -71,7 +71,7 @@
                         <div class="form-group row">
                           <label class="col-sm-3 form-control-label"></label>
                           <div class="col-sm-3 select">
-                            <input id="htawar" type="radio" name="htawar">
+                            <input id="htawar" type="radio" name="harga">
                             <label for="option">Harga Tawaran</label>
                           </div>
                           <div class="col-sm-3">

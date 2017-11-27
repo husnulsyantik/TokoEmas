@@ -34,7 +34,7 @@
                     <div class="line"></div>
                         <div class="form-group row">
                           <div class="col-sm-8 offset-sm-8">
-                           <a href="#"><input type="button" value="&nbsp;Batal&nbsp;" type="submit" class="btn btn-secondary"></input></a>&nbsp;&nbsp;
+                           <a href="daftartambahan.php"><input type="button" value="&nbsp;Batal&nbsp;" type="submit" class="btn btn-secondary"></input></a>&nbsp;&nbsp;
                             <a href="#"><input type="button" value="Proses" type="submit" class="btn btn-primary"></input></a>
                           </div>
                         </div> 
