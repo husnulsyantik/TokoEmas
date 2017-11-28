@@ -1,5 +1,6 @@
 <?php
-include "../header.php"
+include "../header.php";
+include "../koneksi.php";
 ?>
 
  <header class="page-header">
@@ -74,57 +75,55 @@ include "../header.php"
                               <button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true">×</span></button>
                             </div>
                             <div class="modal-body">
-                              <form class="form-horizontal"> <!-- pembuatan form -->
-                    <div class="form-group row">
-                      <label class="col-sm-3 form-control-label">Kode </label> <!-- pembuatan label form -->
-                      <div class="col-sm-6">
-                        <input type="text" name="kode" class="form-control form-control-success"> <!-- pembuatan inputan form -->
-                      </div>
-                    </div>
-                      <div class="form-group row">
-                      <label class="col-sm-3 form-control-label">Nama </label>
-                      <div class="col-sm-6">
-                        <input type="text" name="nama" class="form-control form-control-success">
-                      </div>
-                    </div>
-                      <div class="form-group row">
-                      <label class="col-sm-3 form-control-label">Alamat </label>
-                      <div class="col-sm-6">
-                        <textarea type="text" name="alamat" class="form-control form-control-success"></textarea>
-                      </div>
-                    </div>
-                      <div class="form-group row">
-                      <label class="col-sm-3 form-control-label">Kota </label>
-                      <div class="col-sm-6">
-                        <input type="text" name="kota" class="form-control form-control-success">
-                      </div>
-                    </div>
-                      <div class="form-group row">
-                      <label class="col-sm-3 form-control-label">Telephone </label>
-                      <div class="col-sm-6">
-                        <input type="number" name="telp" class="form-control form-control-success">
-                      </div>
-                    </div>
-                      <div class="form-group row">
-                      <label class="col-sm-3 form-control-label">Default </label>
-                      <div class="col-sm-6">
-                        <input type="text" name="default" class="form-control form-control-success">
-                      </div>
-                    </div>
-                    <div class="form-group row">
-                      <label class="col-sm-3 form-control-label">Status </label>
-                      <div class="col-sm-6">
-                        <input type="text" name="status" class="form-control form-control-warning">
-                      </div>
-                    </div>
-					  
-                     
-                  </form>
+                               <form class="form-horizontal" action="input_sales.php" method="post"> <!-- pembuatan form -->
+                                <div class="form-group row">
+                                  <label class="col-sm-3 form-control-label">Kode </label> <!-- pembuatan label form -->
+                                  <div class="col-sm-6">
+                                    <input type="text" name="kode" class="form-control form-control-success"> <!-- pembuatan inputan form -->
+                                  </div>
+                                </div>
+                                  <div class="form-group row">
+                                  <label class="col-sm-3 form-control-label">Nama </label>
+                                  <div class="col-sm-6">
+                                    <input type="text" name="nama" class="form-control form-control-success">
+                                  </div>
+                                </div>
+                                  <div class="form-group row">
+                                  <label class="col-sm-3 form-control-label">Alamat </label>
+                                  <div class="col-sm-6">
+                                    <textarea type="text" name="alamat" class="form-control form-control-success"></textarea>
+                                  </div>
+                                </div>
+                                  <div class="form-group row">
+                                  <label class="col-sm-3 form-control-label">Kota </label>
+                                  <div class="col-sm-6">
+                                    <input type="text" name="kota" class="form-control form-control-success">
+                                  </div>
+                                </div>
+                                  <div class="form-group row">
+                                  <label class="col-sm-3 form-control-label">Telephone </label>
+                                  <div class="col-sm-6">
+                                    <input type="number" name="telp" class="form-control form-control-success">
+                                  </div>
+                                </div>
+                                  <div class="form-group row">
+                                  <label class="col-sm-3 form-control-label">Default </label>
+                                  <div class="col-sm-6">
+                                    <input type="text" name="default" class="form-control form-control-success">
+                                  </div>
+                                </div>
+                                <div class="form-group row">
+                                  <label class="col-sm-3 form-control-label">Status </label>
+                                  <div class="col-sm-6">
+                                    <input type="text" name="status" class="form-control form-control-warning">
+                                  </div>
+                                </div>
                             </div>
                             <div class="modal-footer">
                               <button type="button" data-dismiss="modal" class="btn btn-secondary">Close</button>
-                                <a href="sales2.php"><button type="button" class="btn btn-primary">Save changes</button></a>
+                              <button type="submit" class="btn btn-primary" name="simpan">Save changes</button>
                             </div>
+                            </form>
                           </div>
                         </div>
                       </div>
@@ -139,6 +138,7 @@ include "../header.php"
                 </div>
           </section>
           <!-- form sales    -->
+
                  
 <?php
 include "../footer.php"
