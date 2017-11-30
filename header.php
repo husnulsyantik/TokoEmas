@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="../css/fontastic.css">
     <!-- Font Awesome CSS-->
     <link rel="stylesheet" href="../vendor/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../datatable/dataTables.bootstrap.css">
     <!-- Google fonts - Poppins -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,700">
     <!-- theme stylesheet-->
@@ -118,7 +119,7 @@
           </div>
           <!-- Sidebar Navidation Menus--><span class="heading">Main</span>
           <ul class="list-unstyled">
-             <li class="active"><a href="#dashvariants" aria-expanded="false" data-toggle="collapse"> <i class="fa fa-th-large"></i>Master Data </a>
+             <li ><a href="#dashvariants" aria-expanded="false" data-toggle="collapse"> <i class="fa fa-th-large"></i>Master Data </a>
               <ul id="dashvariants" class="collapse list-unstyled">
 			  
                 <li><a href="/TokoEmas/masterdata/daftartambahan.php">Daftar Tambahan</a></li>
@@ -126,7 +127,16 @@
 				<li><a href="/TokoEmas/masterdata/databarang.php">Input data</a></li>
               </ul>
             </li>
-			  <li class=""> <a href="/TokoEmas/transaksi/penjualan1.php"><i class="fa fa-credit-card"></i>Transaksi</a></li>
+			   <li ><a href="#dashvariants2" aria-expanded="false" data-toggle="collapse"> <i class="fa fa-th-large"></i>Transaksi </a>
+              <ul id="dashvariants2" class="collapse list-unstyled">
+			  
+                <li><a href="/TokoEmas/masterdata/daftartambahan.php">Pengeluaran</a></li>
+                <li><a href="/TokoEmas/masterdata/sales2.php">Penjualan</a></li>
+				<li><a href="/TokoEmas/masterdata/databarang.php">Pinjam</a></li>
+                <li><a href="/TokoEmas/masterdata/databarang.php">Reparasi</a></li>
+                <li><a href="/TokoEmas/masterdata/databarang.php">Cuci</a></li>
+              </ul>
+            </li>
             <li class=""> <a href=""><i class="fa fa-book"></i>Laporan</a></li>
             <li class=""> <a href=""><i class="fa fa-check"></i>Check Up</a></li>
             <li class=""> <a href=""><i class="fa fa-wrench"></i>Options</a></li> 
