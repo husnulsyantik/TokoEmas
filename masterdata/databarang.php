@@ -20,6 +20,8 @@
                     <div class="card-close">
                      
                     </div>
+                      
+                      
                     
 
                     <div class="card-body">
@@ -40,41 +42,32 @@
                      <div class="form-group row">
                           <label class="col-sm-3 form-control-label">Kadar</label>
                           <div class="col-sm-6 select">
-                         <select name="id_jenisbarang" id="id_jenisbarang" class="form-control">
+                         <select name="id_jenisbarang" id="idkadar" class="form-control">
 						<option value="">--Pilih Kadar Barang--</option>
-							<?php
-						
+				<?php
 						$kadar1=mysqli_query($conn,"SELECT * FROM kadar order by nama_jenis_barang");
-						while ($kadar2=mysqli_fetch_array($kadar1))
-						{
-							if($kadar2['id_jenisbarang']==$_POST['id_jenisbarang'])
-							{
-								echo "<option value=$kadar2[id_jenisbarang] selected>$kadar2[kode] ($kadar2[kadar_persen])% </option>";
-								}
-								else
-								echo "<option value=$kadar2[id_jenisbarang]>$kadar2[kode] ($kadar2[kadar_persen])%</option>";
-								}
-						?>
+						while ($kadar2=mysqli_fetch_array($kadar1)) { ?>
+                             
+                        <option value="<?php echo $kadar2['id_jenisbarang'];?>"> <?php echo $kadar2['kode'];?> <?php echo $kadar2["kadar_persen"] ?>%</option>
+<!--					<option value="<?php //echo $kadar2["id_jenisbarang"]?>"><?php //echo $kadar2["kode"] ($kadar2["kadar_persen"])?>%</option>-->
+				<?php } ?>
 						  </select>
                           </div>
                             </div>
                        <div class="form-group row">
                           <label class="col-sm-3 form-control-label">Jenis Barang</label>
                           <div class="col-sm-6 select">
-                            <select name="id_jenisbarang" id="id_jenisbarang" class="form-control">
+                            <select name="id_jenisbarang" id="idjenisbarang" class="form-control">
 						<option value="">--Pilih Jenis Barang--</option>
 							<?php
 						
 						$kadar1=mysqli_query($conn,"SELECT * FROM jenis_barang order by nama_jenis_barang");
 						while ($jenis2=mysqli_fetch_array($kadar1))
-						{
-							if($jenis2['id_jenisbarang']==$_POST['id_jenisbarang'])
-							{
-								echo "<option value=$jenis2[id_jenisbarang] selected>$jenis2[singkatan] ($jenis2[nama_jenis_barang]) </option>";
-								}
-								else
-								echo "<option value=$jenis2[id_jenisbarang]>$jenis2[singkatan]($jenis2[nama_jenis_barang])</option>";
-								}
+						{ ?>
+							
+                                <option value="<?php echo $jenis2['idjenis_barang'];?>"> <?php echo $jenis2['singkatan'];?>&nbsp;<?php echo $jenis2['nama_jenis_barang']?> </option>
+<!--								echo "<option value=$jenis2[id_jenisbarang]>$jenis2[singkatan]($jenis2[nama_jenis_barang])</option>";-->
+							<?php	}
 						?>
 						  </select>
                           </div>
@@ -83,23 +76,32 @@
                           <label class="col-sm-3 form-control-label">Baki</label>
                           <div class="col-sm-6 select">
 						   <select name="idBaki" id="idBaki" class="form-control">
-						<option value="">--Pilih Baki--</option>
-                            	<?php
 						
-						$baki1=mysqli_query($conn,"SELECT * FROM baki");
-						while ($baki2=mysqli_fetch_array($baki1))
-						{
-							if($baki2['idBaki']==$_POST['idBaki'])
-							{
-								echo "<option value=$baki2[idBaki] selected>$baki2[idBaki] </option>";
-								}
-								else
-								echo "<option value=$baki2[idBaki]>$baki2[idBaki] </option>";
-								}
-						?>
 						  </select>
 						  </div>
                             </div>
+                          
+                          
+                    <script type="text/javascript">
+                        
+                            $("#idjenisbarang").change(function(){
+                                var jenisBarang = $("#idjenisbarang").val();
+                                $.ajax({
+                                    type:"POST",
+                                    dataType:"html",
+                                    url:"ambilbaki.php",
+                                    data:"jb="+jenisBarang,
+                            
+                                    success:function(msg){
+                                    $("#idBaki").html(msg);
+                                }
+                                });
+                            });
+                       
+
+                    </script>
+                          
+                          
                       <div class="form-group row">
                       <label class="col-sm-3 form-control-label">Berat</label>
                       <div class="col-sm-6">
@@ -127,6 +129,8 @@
               </div>
             </div>
           </section>
+
+
 
 <?php
     include '../footer.php';
