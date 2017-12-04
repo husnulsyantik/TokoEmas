@@ -20,44 +20,43 @@ include "../koneksi.php";
                   <form class="form-horizontal">
 				 <div class="form-group">
 				   <div class="col-sm-5 offset-sm-6">
-                          <div class="input-group">
-                            <input type="text" class="form-control"><span class="input-group-btn">
-                              <button type="button" class="btn btn-primary">Search</button></span>
-                          </div>
+                          
 							</div>
 						
                       </div>
                       </form></div>
                   
                     <div class="card-body">
-                      <table class="table table-striped table-hover">
+                      <table class="table table-striped table-hover" id="tabel_data">
                         <thead>
-                          <tr>
-                            <th>No</th>
                             <th>Kode</th>
                             <th>Nama</th>
                             <th>Alamat</th>
                             <th>Kota</th>
-                            <th>Telpon</th>
+                            <th>Telepon</th>
+                            <th>Default</th>
                             <th>Status</th>
-                          </tr>
+                          
                         </thead>
                         <tbody>
+                             <?php
+                 $query = mysqli_query($conn,"SELECT * FROM tabel_sales");
+                 while($data = mysqli_fetch_array($query)){
+              ?>
                            
                           <tr>
-                            <th scope="row">1</th>
-                            <td>PA1</td>
-                            <td>adi</td>
-                            <td>kencong</td>
-                            <td>jember</td>
-                            <td>08674565665</td>
-                            <td>Aktif</td>
-                            
+                              
+                              <td><?php echo $data['kode_sales']?></td>
+                              <td><?php echo $data['nama_sales']?></td>
+                              <td><?php echo $data['alamat']?></td>
+                              <td><?php echo $data['kota']?></td>
+                              <td><?php echo $data['telephone']?></td>
+                              <td><?php echo $data['default']?></td>
+                              <td><?php echo $data['status']?></td>
+                                                       
                           </tr>
-                            
-                         
-                        </tbody>
-                          
+                          <?php } ?>
+                        </tbody> 
                           
                       </table>
                          <div class="line"></div>
@@ -118,7 +117,7 @@ include "../koneksi.php";
                                     <input type="text" name="status" class="form-control form-control-warning">
                                   </div>
                                 </div>
-                            </div>
+                            
                             <div class="modal-footer">
                               <button type="button" data-dismiss="modal" class="btn btn-secondary">Close</button>
                               <button type="submit" class="btn btn-primary" name="simpan">Save changes</button>
@@ -133,10 +132,9 @@ include "../koneksi.php";
                           </div>
                         </div>
                     </div>
+</section>
                   
-                  </div>
-                </div>
-          </section>
+                
           <!-- form sales    -->
 
                  

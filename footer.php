@@ -26,5 +26,12 @@
     <script src="../js/Chart.min.js"></script>
     <script src="../js/charts-home.js"></script>
     <script src="../js/front.js"></script>
+    <script src="../js/dataTables.bootstrap.js"></script>
+    <script src="../js/jquery.dataTables.min.js"></script>
+    <script>
+        $(document).ready(function() { 
+            $("#tabel_data").dataTable();
+	});
+</script>
   </body>
 </html>
