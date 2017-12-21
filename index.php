@@ -73,8 +73,8 @@ include "header.php"
                         labels: ["Januari", "Februari", "Maret", "April", "Mei", "Juni", "Juli", "Agustus", "Oktober", "November", "Desember"],
     //                    labels: [<?php //while ($b = mysqli_fetch_array($bulan)) { echo '"' . $b['bulan'] . '",';}?>],
                         datasets: [{
-                                label: '# of Votes',
-                                data: [10, 12, 13, 9, 14, 18, 20, 11, 15, 25, 12, 16],
+                                label: 'Daerah Perubahan Harga',
+                                data: [100000, 120000, 130000, 90000, 140000, 180000, 200000, 110000, 150000, 250000, 120000, 160000],
     //                            data: [<?php //while ($p = mysqli_fetch_array($penghasilan)) { echo '"' . $p['hasil_penjualan'] . '",';}?>],
                                 backgroundColor: [
     //                                'rgba(255, 99, 132, 0.2)',
