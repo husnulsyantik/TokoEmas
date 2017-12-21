@@ -43,7 +43,7 @@
             <div class="navbar-holder d-flex align-items-center justify-content-between">
               <!-- Navbar Header-->
               <div class="navbar-header">
-                <!-- Navbar Brand --><a href="/TokoEmas/index.php" class="navbar-brand">
+                <!-- Navbar Brand --><a href="index.php" class="navbar-brand">
                   <div class="brand-text brand-big"><span>TOKO </span><strong>EMAS</strong></div>
                   <div class="brand-text brand-small"><strong>TE</strong></div></a>
                 <!-- Toggle Button--><a id="toggle-btn" href="#" class="menu-btn active"><span></span><span></span><span></span></a>
@@ -100,7 +100,7 @@
                   </ul>
                 </li>
                 <!-- Logout    -->
-                <li class="nav-item"><a href="/TokoEmas/logout.php" class="nav-link logout">Logout<i class="fa fa-sign-out"></i></a></li>
+                <li class="nav-item"><a href="login.html" class="nav-link logout">Logout<i class="fa fa-sign-out"></i></a></li>
               </ul>
             </div>
           </div>
@@ -111,47 +111,35 @@
         <nav class="side-navbar">
           <!-- Sidebar Header-->
           <div class="sidebar-header d-flex align-items-center">
-          
+            <div class="avatar"><img src="../img/avatar-3.jpg" alt="..." class="img-fluid rounded-circle"></div>
             <div class="title">
               <h1 class="h4">Husnul Hotimah</h1>
               <p>Kasir</p>
             </div>
           </div>
-          <!-- Sidebar Navidation Menus-->
+          <!-- Sidebar Navidation Menus--><span class="heading">Main</span>
           <ul class="list-unstyled">
-		   <li class=""> <a href="/TokoEmas/index.php"><i class="fa fa-home"></i>Dasboard</a></li>
              <li ><a href="#dashvariants" aria-expanded="false" data-toggle="collapse"> <i class="fa fa-th-large"></i>Master Data </a>
-			 
               <ul id="dashvariants" class="collapse list-unstyled">
-				
-              <li ><a href="#dashvariants3" aria-expanded="false" data-toggle="collapse">Daftar Tambahan </a>
-              <ul id="dashvariants3" class="collapse list-unstyled" >
 			  
-                <li><a href="/TokoEmas/masterdata/backup.php">BackUp Data</a></li>
-                <li><a href="/TokoEmas/masterdata/pilihan_inport_data.php">Import Data</a></li>
-				<li><a href="/TokoEmas/masterdata/perbaikan_stok_tambahan.php">Perbaikan Stok tambahan</a></li>
-                      </ul>
-            </li>
-				
+                <li><a href="/TokoEmas/masterdata/daftartambahan.php">Daftar Tambahan</a></li>
                 <li><a href="/TokoEmas/masterdata/sales2.php">Sales</a></li>
 				<li><a href="/TokoEmas/masterdata/databarang.php">Input data</a></li>
-				<li><a href="/TokoEmas/masterdata/barang.php">Data Barang</a></li>
               </ul>
             </li>
-			   <li ><a href="#dashvariants2" aria-expanded="false" data-toggle="collapse"> <i class="fa fa-th-list"></i>Transaksi </a>
+			   <li ><a href="#dashvariants2" aria-expanded="false" data-toggle="collapse"> <i class="fa fa-th-large"></i>Transaksi </a>
               <ul id="dashvariants2" class="collapse list-unstyled">
 			  
-                <li><a href="/TokoEmas/transaksi/pengeluaran1.php">Pengeluaran</a></li>
-                <li><a href="/TokoEmas/transaksi/penjualan1.php">Penjualan</a></li>
-				<li><a href="/TokoEmas/transaksi/pinjam1.php">Pinjam</a></li>
-                <li><a href="/TokoEmas/transaksi/raparasi.php">Reparasi</a></li>
-                <li><a href="/TokoEmas/transaksi/cuci.php">Cuci</a></li>
+                <li><a href="/TokoEmas/masterdata/daftartambahan.php">Pengeluaran</a></li>
+                <li><a href="/TokoEmas/masterdata/sales2.php">Penjualan</a></li>
+				<li><a href="/TokoEmas/masterdata/databarang.php">Pinjam</a></li>
+                <li><a href="/TokoEmas/masterdata/databarang.php">Reparasi</a></li>
+                <li><a href="/TokoEmas/masterdata/databarang.php">Cuci</a></li>
               </ul>
             </li>
             <li class=""> <a href=""><i class="fa fa-book"></i>Laporan</a></li>
             <li class=""> <a href=""><i class="fa fa-check"></i>Check Up</a></li>
             <li class=""> <a href=""><i class="fa fa-wrench"></i>Options</a></li> 
-			<li class=""> <a href="/TokoEmas/login.php"><i class="fa fa-user"></i>Login Page</a></li> 
 			
           </ul>
         </nav>
