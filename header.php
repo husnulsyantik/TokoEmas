@@ -151,7 +151,7 @@
             <li class=""> <a href=""><i class="fa fa-book"></i>Laporan</a></li>
             <li class=""> <a href=""><i class="fa fa-check"></i>Check Up</a></li>
             <li class=""> <a href=""><i class="fa fa-wrench"></i>Options</a></li> 
-			<li class=""> <a href="/TokoEmas/login.php"><i class="fa fa-user"></i>Login Page</a></li> 
+			<li class=""> <a href="/TokoEmas/login1.php"><i class="fa fa-user"></i>Login Page</a></li> 
 			
           </ul>
         </nav>
