@@ -25,6 +25,15 @@
         <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
         <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
 		<script src="vendor/jquery/jquery.js"></script>
+      <script src="vendor/chart.js/Chart.bundle.js"></script>
+<!--      <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.3.0/Chart.bundle.js"></script>-->
+<!--        <script src="Chart.bundle.js"></script>-->
+        <style type="text/css">
+            .container-fluid {
+                width: 100%;
+                margin: 15px auto;
+            }
+        </style>
   </head>
   <body>
     <div class="page form-page">
@@ -43,7 +52,61 @@ include "header.php"
             </div>
           </header>
  <!-- Forms Section-->
-          <section class="forms"> 
+          <section class="forms">  
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="card-close">
+                         </div>
+                    <div class="card"><br>
+                <h1> <strong><center> Grafik Perkembangan Harga Emas per Bulan</center><br></strong></h1>
+                <canvas id="myChart" width="1070px" height="300"></canvas>
+                    </div>
+                </div>
+                </div>
+            </div>
+            <script>
+                var ctx = document.getElementById("myChart");
+                var myChart = new Chart(ctx, {
+                    type: 'line',
+                    data: {
+                        labels: ["Januari", "Februari", "Maret", "April", "Mei", "Juni", "Juli", "Agustus", "Oktober", "November", "Desember"],
+    //                    labels: [<?php //while ($b = mysqli_fetch_array($bulan)) { echo '"' . $b['bulan'] . '",';}?>],
+                        datasets: [{
+                                label: '# of Votes',
+                                data: [10, 12, 13, 9, 14, 18, 20, 11, 15, 25, 12, 16],
+    //                            data: [<?php //while ($p = mysqli_fetch_array($penghasilan)) { echo '"' . $p['hasil_penjualan'] . '",';}?>],
+                                backgroundColor: [
+    //                                'rgba(255, 99, 132, 0.2)',
+                                    'rgba(54, 162, 235, 0.2)',
+                                    'rgba(255, 206, 86, 0.2)',
+                                    'rgba(75, 192, 192, 0.2)',
+                                    'rgba(153, 102, 255, 0.2)',
+                                    'rgba(255, 159, 64, 0.2)'
+                                ],
+                                borderColor: [
+    //                                'rgba(255,99,132,1)',
+                                    'rgba(54, 162, 235, 1)',
+                                    'rgba(255, 206, 86, 1)',
+                                    'rgba(75, 192, 192, 1)',
+                                    'rgba(153, 102, 255, 1)',
+                                    'rgba(255, 159, 64, 1)'
+                                ],
+                                borderWidth: 1
+                            }]
+                    },
+                    options: {
+                        scales: {
+                            yAxes: [{
+                                    ticks: {
+                                        beginAtZero: true
+                                    }
+                                }]
+                        }
+                    }
+                });
+            </script>
+              
             <div class="container-fluid">
               <div class="row">
                 
@@ -54,9 +117,6 @@ include "header.php"
                          </div>
                     
 					 <div class="card-body">
-					 
-                     
-
                    <h1> <strong><center> Visi</center><br></strong></h1>
                     <p> Menjadi toko emas yang terbaik dan terpercaya yang selalu mengutamakan kualitas produk dan pelayanan yang ramah, jujur dan cepat.</p><br>
                     <h1> <strong><center> Misi</center><br></strong></h1>  
