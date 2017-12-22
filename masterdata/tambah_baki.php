@@ -1,35 +1,30 @@
 <?php
-include "../header.php";
-include "../koneksi.php";
-?>
+	include '../koneksi.php';
 
- <header class="page-header">
+    include '../header.php';
+	
+?>
+          <!-- Page Header-->
+          <header class="page-header">
             <div class="container-fluid">
-              <h2 class="no-margin-bottom">Tambah Baki</h2>
+              <h2 class="no-margin-bottom">Tambah Data Barang</h2>
             </div>
           </header>
-<!-- form sales-->
-          <section class="dashboard-counts">
+          <!-- Forms Section-->
+          <section class="forms"> 
             <div class="container-fluid">
-              <div class="row bg-white has-shadow">
-                <!-- Item -->
-                
-                  
-                 
-                  <div class="col-lg-12">
-                  <form class="form-horizontal">
-				 <div class="form-group">
-				   <div class="col-sm-5 offset-sm-6">
-                          
-							</div>
-						
-                      </div>
-                      </form></div>
-                  
+              <div class="row">
+<!-- Form Elements -->
+                 <div class="col-lg-12">
+                  <div class="card">
+                    <div class="card-close">
+                     
+                    </div>
+                    
+
                     <div class="card-body">
-                      
-                          <form class="form-horizontal" action="input_baki.php" method="post"> <!-- pembuatan form -->
-                               <div class="form-group row">
+                      <form class="form-horizontal" action="input_baki.php" method="post"> <!-- pembuatan form -->
+                      <div class="form-group row">
                           <label class="col-sm-3 form-control-label">ID Jenis Barang</label>
                           <div class="col-sm-6 select">
 						   <select name="idjenis_barang" id="idjenis_barang" class="form-control">
@@ -50,27 +45,27 @@ include "../koneksi.php";
 						  </select>
 						  </div>
                             </div>
-                               <div class="form-group row">
+                      <div class="form-group row">
                       <label class="col-sm-3 form-control-label">ID Baki</label>
                       <div class="col-sm-6">
                         <input type="text" name="idBaki" class="form-control form-control-success">
                       </div>
                     </div>
-                            
-                            <div class="modal-footer">
-                              <button type="button" data-dismiss="modal" class="btn btn-secondary">BAtal</button>
+                   
+					  
+                        <div class="line"></div>
+                    <div class="col-sm-4 offset-sm-3">
+                        <a href="tambah_baki.php"><button type="button" class="btn btn-secondary">Batal</button></a>
                               <button type="submit" class="btn btn-primary" name="simpan">Simpan</button>
-                            </div>
-                            </form>
-                          </div>
-                        </div>
                     </div>
-</section>
-                  
-                
-          <!-- form sales    -->
+                  </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
 
-                 
 <?php
-include "../footer.php"
+    include '../footer.php';
 ?>
