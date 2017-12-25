@@ -46,7 +46,7 @@
                                             <div class="form-group">
                                                 <select class="form-control" name="status" id="status">
                                                     <option enebled>-- Pilih status USER --</option>
-                                                    <option value="super_admin" id="sa">Super Admin</option>
+                                                    <option value="super admin" id="sa">Super Admin</option>
                                                     <option value="admin" id="a">Admin</option>
                                                     <option value="operator" id="o">Operator</option>
                                                     <option value="tambahan" id="t">Tambahan</option>
@@ -56,9 +56,9 @@
                                             <div class="form-group">
                                                 <input class="form-control" placeholder="masukkan Username" name="username" type="text" id="fadmin" autofocus>
                                             </div>
-                                             <div class="form-group">
+                                            <!-- <div class="form-group">
                                                 <input class="form-control" placeholder="ganti password" name="changepass" type="text" id="fadmin" autofocus>
-                                            </div>
+                                            </div>-->
                                             <div class="form-group">
                                                 <input class="form-control" placeholder="id toko" name="idtoko" type="text" id="fnoadmin" autofocus>
                                             </div>
@@ -69,7 +69,7 @@
                                             <input type="submit" class="btn btn-lg btn-danger btn-block" style="background:#796AEE" value="Login">
                                         </fieldset>
                                     </form>
-                                    <script>
+                                  <!--  <script>
                                        $(document).ready(function(){
                                                $('#sa').click(function(){
                                                 $('#fadmin').show();
@@ -95,8 +95,8 @@
                                                 $('#fadmin').hide();
 
                                         });
-                                      });
-                                    </script>
+                                      }); 
+                                    </script>-->
                                 </div>
                             </div>
                         </div><br><br>
