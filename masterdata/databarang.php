@@ -26,7 +26,7 @@ if(isset($_POST['input']))
 $q = mysqli_query($conn,"Insert into barang values('$idBarang','$nama_barang','$idbaki','$idkadar','$idjenis_barang','$berat','$foto','L1')") or die(mysql_error());
 echo "<script>
 alert('Data Sudah Diinputkan');
-window.location='databarang.php';
+window.location='barang.php';
 </script>";	
 
 }
@@ -98,7 +98,7 @@ window.location='databarang.php';
                          <select name="idkadar" id="idkadar" class="form-control">
 						<option value="">--Pilih Kadar Barang--</option>
 				<?php
-						$kadar1=mysqli_query($conn,"SELECT * FROM kadar order by nama_jenis_barang");
+						$kadar1=mysqli_query($conn,"SELECT * FROM kadar order by nama_kadar_barang");
 						while ($kadar2=mysqli_fetch_array($kadar1)) { ?>
                              
                         <option value="<?php echo $kadar2['idkadar'];?>"> <?php echo $kadar2['kode'];?> <?php echo $kadar2["kadar_persen"] ?>%</option>
@@ -156,7 +156,7 @@ window.location='databarang.php';
                           
                           
                       <div class="form-group row">
-                      <label class="col-sm-3 form-control-label">Berat</label>
+                      <label class="col-sm-3 form-control-label">Berat (Gram)</label>
                       <div class="col-sm-6">
                         <input type="text" name="berat" class="form-control " required="">
                       </div>
