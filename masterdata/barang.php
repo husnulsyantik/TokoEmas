@@ -33,6 +33,8 @@ window.location='barang.php';
                     </div>
                       
                          <div class="card-body">
+						 <div class="col-sm-4 offset-sm-10">
+						 <a href="/TokoEmas/masterdata/databarang.php"><button type="button" class="btn btn-primary">Tambah Data </button></a></div><br>
                       <table class="table table-striped table-hover" id="tabel_data">
                         <thead>
 						<th>No.</th>
@@ -62,9 +64,9 @@ window.location='barang.php';
                               <td><?php echo $data['kode']?></td>
                               <td><?php echo $data['idBaki']?></td>
                               <td><?php echo $data['berat']?> Gram</td>
-                              <td><?php echo $data['foto']?></td>
+                              <td><img src="/TokoEmas/upload/<?php echo $data['foto']; ?>" width="50" height="50" ></td>
 							  <td><?php echo $data['Nama_Toko']?></td>
-							  <td><a href="edit.php?update=<?php echo $data['idBarang']; ?>"><img src="/TokoEmas/img/edit.png" width="35" height="35"></a>&nbsp;
+							  <td><a href="editbarang.php?update=<?php echo $data['idBarang']; ?>"><img src="/TokoEmas/img/edit.png" width="35" height="35"></a>&nbsp;
 						<a href="?del=<?php echo $data['idBarang']; ?>"><img src="/TokoEmas/img/hapus.png" width="30" height="30"></a> </td>
                                                        
                           </tr>

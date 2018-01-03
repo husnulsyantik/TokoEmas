@@ -50,57 +50,9 @@
               </div>
               <!-- Navbar Menu -->
               <ul class="nav-menu list-unstyled d-flex flex-md-row align-items-md-center">
-                <!-- Search-->
-                <li class="nav-item d-flex align-items-center"><a id="search" href="#"><i class="icon-search"></i></a></li>
-                <!-- Notifications-->
-                <li class="nav-item dropdown"> <a id="notifications" rel="nofollow" data-target="#" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link"><i class="fa fa-bell-o"></i><span class="badge bg-red">12</span></a>
-                  <ul aria-labelledby="notifications" class="dropdown-menu">
-                    <li><a rel="nofollow" href="#" class="dropdown-item"> 
-                        <div class="notification">
-                          <div class="notification-content"><i class="fa fa-envelope bg-green"></i>You have 6 new messages </div>
-                          <div class="notification-time"><small>4 minutes ago</small></div>
-                        </div></a></li>
-                    <li><a rel="nofollow" href="#" class="dropdown-item"> 
-                        <div class="notification">
-                          <div class="notification-content"><i class="fa fa-twitter bg-blue"></i>You have 2 followers</div>
-                          <div class="notification-time"><small>4 minutes ago</small></div>
-                        </div></a></li>
-                    <li><a rel="nofollow" href="#" class="dropdown-item"> 
-                        <div class="notification">
-                          <div class="notification-content"><i class="fa fa-upload bg-orange"></i>Server Rebooted</div>
-                          <div class="notification-time"><small>4 minutes ago</small></div>
-                        </div></a></li>
-                    <li><a rel="nofollow" href="#" class="dropdown-item"> 
-                        <div class="notification">
-                          <div class="notification-content"><i class="fa fa-twitter bg-blue"></i>You have 2 followers</div>
-                          <div class="notification-time"><small>10 minutes ago</small></div>
-                        </div></a></li>
-                    <li><a rel="nofollow" href="#" class="dropdown-item all-notifications text-center"> <strong>view all notifications                                            </strong></a></li>
-                  </ul>
-                </li>
-                <!-- Messages                        -->
-                <li class="nav-item dropdown"> <a id="messages" rel="nofollow" data-target="#" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link"><i class="fa fa-envelope-o"></i><span class="badge bg-orange">10</span></a>
-                  <ul aria-labelledby="notifications" class="dropdown-menu">
-                    <li><a rel="nofollow" href="#" class="dropdown-item d-flex"> 
-                        <div class="msg-profile"> <img src="img/avatar-1.jpg" alt="..." class="img-fluid rounded-circle"></div>
-                        <div class="msg-body">
-                          <h3 class="h5">Jason Doe</h3><span>Sent You Message</span>
-                        </div></a></li>
-                    <li><a rel="nofollow" href="#" class="dropdown-item d-flex"> 
-                        <div class="msg-profile"> <img src="img/avatar-2.jpg" alt="..." class="img-fluid rounded-circle"></div>
-                        <div class="msg-body">
-                          <h3 class="h5">Frank Williams</h3><span>Sent You Message</span>
-                        </div></a></li>
-                    <li><a rel="nofollow" href="#" class="dropdown-item d-flex"> 
-                        <div class="msg-profile"> <img src="img/avatar-3.jpg" alt="..." class="img-fluid rounded-circle"></div>
-                        <div class="msg-body">
-                          <h3 class="h5">Ashley Wood</h3><span>Sent You Message</span>
-                        </div></a></li>
-                    <li><a rel="nofollow" href="#" class="dropdown-item all-notifications text-center"> <strong>Read all messages    </strong></a></li>
-                  </ul>
-                </li>
+			      
                 <!-- Logout    -->
-                <li class="nav-item"><a href="/TokoEmas/logout.php" class="nav-link logout">Logout<i class="fa fa-sign-out"></i></a></li>
+                <li class="nav-item" ><a href="/TokoEmas/logout.php" class="nav-link logout">Logout<i class="fa fa-sign-out"></i></a></li>
               </ul>
             </div>
           </div>
@@ -134,7 +86,6 @@
             </li>
 				
                 <li><a href="/TokoEmas/masterdata/sales2.php">Sales</a></li>
-				<li><a href="/TokoEmas/masterdata/databarang.php">Input data</a></li>
 				<li><a href="/TokoEmas/masterdata/barang.php">Data Barang</a></li>
               </ul>
             </li>
@@ -144,14 +95,14 @@
                 <li><a href="/TokoEmas/transaksi/pengeluaran1.php">Pengeluaran</a></li>
                 <li><a href="/TokoEmas/transaksi/penjualan1.php">Penjualan</a></li>
 				<li><a href="/TokoEmas/transaksi/pinjam1.php">Pinjam</a></li>
-                <li><a href="/TokoEmas/transaksi/raparasi.php">Reparasi</a></li>
+                <li><a href="/TokoEmas/transaksi/reparasi.php">Reparasi</a></li>
                 <li><a href="/TokoEmas/transaksi/cuci.php">Cuci</a></li>
               </ul>
             </li>
             <li class=""> <a href=""><i class="fa fa-book"></i>Laporan</a></li>
             <li class=""> <a href=""><i class="fa fa-check"></i>Check Up</a></li>
             <li class=""> <a href=""><i class="fa fa-wrench"></i>Options</a></li> 
-			<li class=""> <a href="/TokoEmas/login1.php"><i class="fa fa-user"></i>Login Page</a></li> 
+			<li class=""> <a href="/TokoEmas/login.php"><i class="fa fa-user"></i>Login Page</a></li> 
 			
           </ul>
         </nav>
