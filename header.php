@@ -97,6 +97,7 @@
 				<li><a href="/TokoEmas/transaksi/pinjam1.php">Pinjam</a></li>
                 <li><a href="/TokoEmas/transaksi/reparasi.php">Reparasi</a></li>
                 <li><a href="/TokoEmas/transaksi/cuci.php">Cuci</a></li>
+                <li><a href="/TokoEmas/transaksi/pemesanan.php">Pemesanan</a></li>
               </ul>
             </li>
             <li class=""> <a href=""><i class="fa fa-book"></i>Laporan</a></li>
