@@ -44,13 +44,7 @@ $newID = $char . sprintf("%03s", $noUrut);
                           <div class="form-group row">
                           <label class="col-sm-3 form-control-label">ID Penjualan</label>
                               <div class="col-sm-6">
-                                <input type="text" name="idpenj" class="form-control form-control-success" id="kdtoko" value="<?php echo $newID; ?>" readonly>
-                              </div>
-                            </div>
-                          <div class="form-group row">
-                          <label class="col-sm-3 form-control-label">ID Toko</label>
-                              <div class="col-sm-6">
-                                <input type="text"  name="kdtoko" class="form-control form-control-success" id="kdtoko">
+                                <input type="text" name="idpenj" class="form-control form-control-success" id="idpenj" value="<?php echo $newID; ?>" readonly>
                               </div>
                             </div>
                        <div class="form-group row">
@@ -102,9 +96,15 @@ $newID = $char . sprintf("%03s", $noUrut);
                           <div class="form-group row">
                       <label class="col-sm-3 form-control-label">ID USER</label>
                       <div class="col-sm-6">
-                        <input type="text" name="iduser" class="form-control form-control-success">
+                        <input type="text" name="iduser" class="form-control form-control-success" id="iduser" onkeyup="isiToko(this.value)" onchange="isiToko(this.value)">
                       </div>
                     </div>
+                          <div class="form-group row">
+                          <label class="col-sm-3 form-control-label">ID Toko</label>
+                              <div class="col-sm-6">
+                                <input type="text" name="kdtoko" class="form-control form-control-success" id="kdtoko">
+                              </div>
+                            </div>
      
                         <div class="line"></div>
                         <div class="form-group row">
@@ -139,6 +139,25 @@ $newID = $char . sprintf("%03s", $noUrut);
                 
             }
                         </script>
+                         
+                         <script type="text/javascript">
+                          function isiToko(koduser){
+                                $("#iduser").change(function(){
+                                //var kodbarang = $("#kdbarang").val();
+                                $.ajax({
+                                    url: 'ambiltoko.php',
+                                    data: "kodee="+koduser,
+
+                                    success:function(data1){
+                                        var json1 = data1,
+                                        obj1 = JSON.parse(json1);
+                                        $('#kdtoko').val(obj1.kdtoko);
+                                    }
+                                });
+                                });
+
+                            }
+                         </script>
                          
                          
                          <script>
