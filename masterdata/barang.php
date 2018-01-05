@@ -65,9 +65,10 @@ window.location='barang.php';
                               <td><?php echo $data['idBaki']?></td>
                               <td><?php echo $data['berat']?> Gram</td>
                               <td><img src="/TokoEmas/upload/<?php echo $data['foto']; ?>" width="50" height="50" ></td>
-							  <td><?php echo $data['Nama_Toko']?></td>
-							  <td><a href="editbarang.php?update=<?php echo $data['idBarang']; ?>"><img src="/TokoEmas/img/edit.png" width="35" height="35"></a>&nbsp;
-						<a href="?del=<?php echo $data['idBarang']; ?>"><img src="/TokoEmas/img/hapus.png" width="30" height="30"></a> </td>
+							  <td><?php echo $data['Nama_Toko']?></td>                              
+                              <td><a class="btn btn-warning" href="editbarang.php?update=<?php echo $data['idBarang']; ?>"><i class="fa fa-pencil"></i></a>
+                                 <a class="btn btn-danger" href="?del=<?php echo $data['id_pemesanan']; ?>"> <i class="fa fa-trash"></i></a>
+                              </td>
                                                        
                           </tr>
                           <?php } ?>

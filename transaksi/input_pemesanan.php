@@ -1,8 +1,10 @@
 <?php
 include "../koneksi.php";
 
+
+
     if(isset($_POST['simpanpemesanan'])){
-        $data1=$_POST['id_pemesanan'];
+        $newID=$_POST['id_pemesanan'];
         $data2=$_POST['berat'];
         $data3=$_POST['harga_gram'];
         $data4=$_POST['harga_total'];
@@ -14,7 +16,7 @@ include "../koneksi.php";
         
         
         
-    $insert="INSERT INTO pemesanan VALUES ('$data1','$data2','$data3','$data4','$data5','$data6','$data7','$data8','$data9')"; 
+    $insert="INSERT INTO pemesanan VALUES ('$newID','$data2','$data3','$data4','$data5','$data6','$data7','$data8','$data9')"; 
         
     $query=mysqli_query($conn, $insert);
         if($query){
