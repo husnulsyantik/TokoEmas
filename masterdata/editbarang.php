@@ -1,9 +1,5 @@
 <?php
 	include '../koneksi.php';
-
-$id = $_GET['update'];
-$ambil = mysqli_query($conn, "Select * from barang where idBarang = '$id'");
-$array = mysqli_fetch_array($ambil);
 	
 
 ?>
@@ -32,15 +28,15 @@ $array = mysqli_fetch_array($ambil);
                     
 
                     <div class="card-body">
-                <form class="form-horizontal" method="post" enctype="multipart/form-data" name="f1"> <!-- pembuatan form -->
+                      <form class="form-horizontal" method="post"> <!-- pembuatan form -->
                     <div class="form-group row">
                       <label class="col-sm-3 form-control-label">Id Barang </label> <!-- pembuatan label form -->
                       <div class="col-sm-6">
 					 		  
-                        <input type="text" name="idBarang" class="form-control" value="<?php echo $array['idBarang']; ?>" readonly> 
+                        <input type="text" name="idBarang" class="form-control" value="<?php echo $newID; ?>"disabled> 
 						
-<!--						<input type="text" class="form-control" name="idBarang" value="<?php //echo $_POST['kd_barang'];?>" disabled>-->
-<!--						<input type="text" class="form-control" name="kd_barang" value="<?php //echo $_POST['kd_barang'];?>" hidden>-->
+						<input type="text" class="form-control" name="idBarang" value="<?php echo $_POST['kd_barang'];?>" disabled>
+						<input type="text" class="form-control" name="kd_barang" value="<?php echo $_POST['kd_barang'];?>" hidden>
 						<!-- pembuatan inputan form -->
 						
 						<script type="text/javascript">
@@ -67,7 +63,7 @@ $array = mysqli_fetch_array($ambil);
                       <div class="form-group row">
                       <label class="col-sm-3 form-control-label">Nama Barang </label>
                       <div class="col-sm-6">
-                        <input type="text" name="nama_barang" class="form-control" required="" value="<?php echo $array['nama_barang']; ?>">
+                        <input type="text" name="nama_barang" class="form-control" required="">
                       </div>
                     </div>
                          
@@ -77,7 +73,7 @@ $array = mysqli_fetch_array($ambil);
                          <select name="idkadar" id="idkadar" class="form-control">
 						<option value="">--Pilih Kadar Barang--</option>
 				<?php
-						$kadar1=mysqli_query($conn,"SELECT * FROM kadar order by nama_kadar_barang");
+						$kadar1=mysqli_query($conn,"SELECT * FROM kadar order by nama_jenis_barang");
 						while ($kadar2=mysqli_fetch_array($kadar1)) { ?>
                              
                         <option value="<?php echo $kadar2['idkadar'];?>"> <?php echo $kadar2['kode'];?> <?php echo $kadar2["kadar_persen"] ?>%</option>
@@ -137,89 +133,34 @@ $array = mysqli_fetch_array($ambil);
                       <div class="form-group row">
                       <label class="col-sm-3 form-control-label">Berat (Gram)</label>
                       <div class="col-sm-6">
-                        <input type="text" name="berat" class="form-control " required="" value="<?php echo $array['berat']; ?>">
+                        <input type="text" name="berat" class="form-control " required="">
                       </div>
                     </div>
                     <div class="form-group row">
                       <label class="col-sm-3 form-control-label">Foto </label>
                        <div class="col-sm-6">
-                           <input type="checkbox" name="ubah_foto" value="true" id="ubah_foto" onclick="enable_text(this.checked)">
-                            <label for="option">Checklist, jika anda ingin mengubah gambar</label>
-                            <input type="file" name="foto" class="form-control" id="foto" disabled>
+						  
+                            <input type="text" name="foto" class="form-control" required="">
                           </div>
-                    </div>
-                          <div class="form-group row">
-                      <label class="col-sm-3 form-control-label">ID Toko</label>
-                      <div class="col-sm-6">
-                        <input type="text" name="idtoko" class="form-control " required="" value="<?php echo $array['idtoko']; ?>">
-                      </div>
                     </div>
 					  
                         <div class="line"></div>
                     <div class="col-sm-4 offset-sm-3">
-                     <input type="submit" value="Update" class="btn btn-primary" name="update"><!-- pembuatan button submit form-->&nbsp;&nbsp;
+                     <input type="submit" value="Simpan" class="btn btn-primary" name="input"><!-- pembuatan button submit form-->&nbsp;&nbsp;
                       <!-- pembuatan button jika ingin membatalkan form -->&nbsp;
                       <!-- pembuatan button jika ingin menutup form -->
                     </div>
 					
                   </form>
 
+<?php
+?>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
           </section>
-
-                        <script>
-                            function enable_text(status){
-                                status=!status;
-                                document.f1.foto.disabled = status;
-                            }
-                        </script>
-
-
-<?php
-include "../koneksi.php";
-
-if(isset($_POST['update'])){
-    
-    $id = $_POST['idBarang'];
-	$nama_barang=$_POST['nama_barang'];
-	$idbaki=$_POST['idbaki'];
-	$idkadar=$_POST['idkadar'];
-	$idjenis_barang=$_POST['idjenis_barang'];
-	$berat=$_POST['berat'];
-	$idtoko =$_POST['idtoko'];
-    
-    if(isset($_POST['ubah_foto'])){
-    $fotobar= explode(".", $_FILES['foto']['name']);  //mengambil nama tanpa extensi
-    $foto_baru = round(microtime(true)) . '.' . end($fotobar); //merename nama secara acak
-    move_uploaded_file($_FILES['foto']['tmp_name'], "../upload/$foto_baru");
-        
-        $query = mysqli_query($conn, "select * from barang where idBarang = '$id'");
-        $data = mysqli_fetch_array($query);
-        
-        //cek apakah file foto sebelumnya ada di folder
-        if(is_file("../upload/".$data['foto'])) // Jika foto ada
-        unlink("../upload/".$data['foto']); // Hapus file foto sebelumnya yang ada di folder images
-        
-        $q = mysqli_query($conn,"Update barang SET nama_barang='$nama_barang', idbaki='$idbaki', idkadar='$idkadar', idjenis_barang='$idjenis_barang', berat='$berat', foto='$foto_baru', idtoko='$idtoko' where idBarang = '$id'") or die(mysql_error());
-        echo "<script>
-        alert('Data Sudah Diinputkan broo');
-        window.location='barang.php';
-        </script>";	
-        
-    } else { // Jika user tidak menceklis checkbox yang ada di form ubah, lakukan :
-        $q = mysqli_query($conn,"Update barang SET nama_barang='$nama_barang', idbaki='$idbaki', idkadar='$idkadar', idjenis_barang='$idjenis_barang', berat='$berat', idtoko='$idtoko' where idBarang = '$id'") or die(mysql_error());
-        echo "<script>
-        alert('Data Sudah Diinputkan');
-        window.location='barang.php';
-        </script>";	
-    }
-}
-	
-?>
 
 
 

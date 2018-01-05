@@ -1,8 +1,8 @@
 <?php
-	include 'koneksi.php';
+
+include "koneksi.php";
 ?>
-<!DOCTYPE html>
-<html>
+
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -24,7 +24,10 @@
     <link rel="stylesheet" href="css/custom.css">
     <!-- Favicon-->
     <link rel="shortcut icon" href="favicon.png">
-
+      
+           <!--boostrap carousel-->
+   <link rel="stylesheet" href="css/bootstrap.min.css">
+      
     <!-- Tweaks for older IEs--><!--[if lt IE 9]>
         <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
         <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
@@ -32,7 +35,12 @@
       <script src="vendor/chart.js/Chart.bundle.js"></script>
 <!--      <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.3.0/Chart.bundle.js"></script>-->
 <!--        <script src="Chart.bundle.js"></script>-->
-       
+        <style type="text/css">
+            .container-fluid {
+                width: 100%;
+                margin: 15px auto;
+            }
+        </style>
   </head>
   <body>
     <div class="page form-page">
@@ -50,8 +58,120 @@ include "header.php"
               <h2 class="no-margin-bottom">HOME</h2>
             </div>
           </header>
-		
-   	
+        
+              
+        <!--carousel-->      
+               <div class="container-fluid">
+              <div class="row">
+                
+                <!-- Form Elements -->
+                <div class="col-lg-12">
+                  <div class="card">
+                    <div class="card-close">
+                         </div>
+                  <div class="card-body">  
+    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+      	<!-- Carousel Indikator -->
+        <ol class="carousel-indicators">
+        	<li data-target="carousel-example-generic" data-slide-to="0" class="active"></li>
+            <li data-target="carousel-example-generic" data-slide-to="1"></li>
+        </ol>
+        
+        <!-- Wrapper for Slide -->
+        <div class="carousel-inner">
+        	<div class="item active">
+            <center><img src="img/gold5.jpg" width="1070px" height="400"alt="Slide 1" ></center>
+                <div class="carousel-caption">
+                	<h3>BUMI MAS GOLD</h3>
+                    <p style="color:white">SILENCE IS GOLD</p>
+                </div>
+            </div>
+            <div class="item">
+            <center>	<img src="img/gold3.jpg" width="1070px" height="400" alt="Slide 3"></center>
+                <div class="carousel-caption">
+                	<h3>BUMI MAS GOLD</h3>
+                    <p style="color:white">SILENCE IS GOLD</p>
+                </div>
+            </div>
+            
+            <div class="item">
+            <center>	<img src="img/gold1.jpg" width="1070px" height="400" alt="Slide 4"></center>
+                <div class="carousel-caption">
+                	<h3>BUMI MAS GOLD</h3>
+                    <p style="color:white">SILENCE IS GOLD</p>
+                </div>
+            </div>
+            
+            <div class="item">
+            <center><img src="img/gold2.jpg" width="1070px" height="400" alt="Slide 5"></center>
+                <div class="carousel-caption">
+                	<h3>BUMI MAS GOLD</h3>
+                    <p style="color:white">SILENCE IS GOLD</p>
+                </div>
+            </div>
+            <div class="item">
+            <center>	<img src="img/gold4.jpg" width="1070px" height="400" alt="Slide 6"></center>
+                <div class="carousel-caption">
+                	<h3>BUMI MAS GOLD</h3>
+                    <p style="color:white">SILENCE IS GOLD</p>
+                </div>
+            </div>
+            
+            
+        </div>
+        
+        <!-- Control -->
+        <a href="#carousel-example-generic" class="carousel-control left" data-slide="prev" role="button">
+        	<span class="glyphicon glyphicon-chevron-left"></span>
+        </a>
+        <a href="#carousel-example-generic" class="carousel-control right" data-slide="next" role="button">
+        	<span class="glyphicon glyphicon-chevron-right"></span>
+        </a>
+      </div>
+                      </div>
+    </div>
+                  </div>     </div></div> 
+        <!-- akhiran carousel-->
+        
+        <div class="container-fluid">
+            
+                <div class="row">
+                    <div class="col-lg-12">
+                       <div class="card">
+                            <div class="card-close">
+                         </div>
+      <div class="card-body">
+         
+<br>            <?php
+$data=mysqli_query($conn, "select foto,nama_barang from barang limit 3"); 
+while($query=mysqli_fetch_array($data)) {
+?>
+                <div class="col-xs-12 col-sm-4 col-md-4">
+                    <div class="recent-work-wrap"><br>
+                        <img class="img-responsive" src="/TokoEmas/upload/<?php echo $query['foto'] ;?>" alt="/TokoEmas/upload/<?php echo $query['foto'] ;?>" style="width:400px; height:250px;" >
+                        <div class="overlay">
+                            <div class="recent-work-inner">
+                                <h3><center><span style="color:black"><?php echo $query['nama_barang'] ;?></span></center></h3>
+                                <a class="preview" href="/TokoEmas/upload/<?php echo $query['foto'] ;?>" rel="prettyPhoto">
+                                <i class="fa fa-eye"></i> View</a>
+                            
+                             </div> 
+                       
+                        </div>
+                        
+                    </div>
+                    
+                </div><?php } ?>   
+                    </div> </div>
+            </div>
+            </div>
+        </div>
+        
+        
+        
+        
+        
+        
  <!-- Forms Section-->
           <section class="forms">  
             <div class="container-fluid">
@@ -59,18 +179,20 @@ include "header.php"
                     <div class="col-lg-12">
                         <div class="card-close">
                          </div>
-						   <?php 
-						   $data=mysqli_fetch_array(mysqli_query($conn,"select * from user JOIN role on user.Role_idRole = role.idRole where idUser='$_SESSION[user]'"));
-						   if(!empty($_SESSION['user']) && ($data['Role_idRole'] == 1 OR $data['Role_idRole'] == 2 )) { 
-						   ?>
                     <div class="card"><br>
-					
-                <h1> <strong><center> Grafik Penjualan per Bulan<center><br></strong></h1>
+                <h1> <strong><center> Grafik penjualan<p>Setiap Bulan/harga gram</p></center><br></strong></h1>
                 <canvas id="myChart" width="1070px" height="300"></canvas>
                     </div>
                 </div>
                 </div>
             </div>
+              
+           
+              
+              
+        
+             <!-- GRAFIK-->
+              <div class="container">
               
                 <script>
                 var ctx = document.getElementById("myChart");
@@ -126,8 +248,14 @@ include "header.php"
                     }
                 });
             </script>
-                 
-						   <?php } ?>
+                  </div>
+              
+              
+             
+              
+              
+            
+              
             <div class="container-fluid">
               <div class="row">
                 
@@ -177,5 +305,8 @@ include "header.php"
     <script src="js/Chart.min.js"></script>
     <script src="js/charts-home.js"></script>
     <script src="js/front.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> 
+<!-- Latest compiled and minified JavaScript --> 
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
   </body>
-</html>

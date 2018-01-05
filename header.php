@@ -81,15 +81,7 @@
 			 
               <ul id="dashvariants" class="collapse list-unstyled">
 				
-              <li ><a href="#dashvariants3" aria-expanded="false" data-toggle="collapse">Daftar Tambahan </a>
-              <ul id="dashvariants3" class="collapse list-unstyled" >
-			  
-                <li><a href="/TokoEmas/masterdata/backup.php">BackUp Data</a></li>
-                <li><a href="/TokoEmas/masterdata/pilihan_inport_data.php">Import Data</a></li>
-				<li><a href="/TokoEmas/masterdata/perbaikan_stok_tambahan.php">Perbaikan Stok tambahan</a></li>
-                      </ul>
-            </li>
-				
+              				
                 <li><a href="/TokoEmas/masterdata/sales2.php">Sales</a></li>
 				<li><a href="/TokoEmas/masterdata/barang.php">Data Barang</a></li>
               </ul>
@@ -97,7 +89,7 @@
 			   <li ><a href="#dashvariants2" aria-expanded="false" data-toggle="collapse"> <i class="fa fa-th-list"></i>Transaksi </a>
               <ul id="dashvariants2" class="collapse list-unstyled">
 			  
-                <li><a href="/TokoEmas/transaksi/pengeluaran1.php">Pengeluaran</a></li>
+                <li><a href="/TokoEmas/transaksi/pengeluaran-1.php">Pengeluaran</a></li>
                 <li><a href="/TokoEmas/transaksi/penjualan1.php">Penjualan</a></li>
 				<li><a href="/TokoEmas/transaksi/pinjam1.php">Pinjam</a></li>
                 <li><a href="/TokoEmas/transaksi/reparasi.php">Reparasi</a></li>
@@ -105,11 +97,16 @@
               <li><a href="/TokoEmas/transaksi/pemesanan.php">Pemesanan</a></li>
               </ul>
             </li>
-            <li class=""> <a href=""><i class="fa fa-book"></i>Laporan</a></li>
+           <li ><a href="#dashvariants4" aria-expanded="false" data-toggle="collapse"> <i class="fa fa-book"></i>Laporan </a>
+              <ul id="dashvariants4" class="collapse list-unstyled">
+			  
+                <li><a href="/TokoEmas/laporan/lap_penjualan.php">Lap. Penjualan</a></li>
+              </ul>
+            </li>
             <li class=""> <a href=""><i class="fa fa-check"></i>Check Up</a></li>
             <li class=""> <a href=""><i class="fa fa-wrench"></i>Options</a></li> 
 			 <?php } ?>
-						  <?php if(empty($_SESSION['user'])) { ?>
+			  <?php if(empty($_SESSION['user'])) { ?>
 			<li class=""> <a href="/TokoEmas/login.php"><i class="fa fa-user"></i>Login Page</a></li> 
 			  <?php } ?>
           </ul>

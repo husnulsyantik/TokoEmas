@@ -17,6 +17,13 @@ body {
   overflow-x: hidden;
 }
 
+.item active {
+    text-align: center;
+    width: 3000;
+}
+
+
+
 a, i, span {
   display: inline-block;
   text-decoration: none;

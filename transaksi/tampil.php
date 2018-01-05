@@ -2,7 +2,7 @@
 include "../koneksi.php";
 
 $kode = $_GET['kode'];
-$query = mysqli_query($conn, "select idkadar, berat, harga_jual from barang INNER JOIN harga USING (idkadar) where idBarang = '$kode'");
+$query = mysqli_query($conn, "Select idkadar, berat, harga_jual from barang INNER JOIN harga ON barang.idkadar=harga.id_kadar where idBarang = '$kode'");
 $mahasiswa = mysqli_fetch_array($query);
 $id_kadar = $mahasiswa['idkadar'];
 $nama_kadar = mysqli_query($conn, "select kode from kadar where idkadar = '$id_kadar'");
