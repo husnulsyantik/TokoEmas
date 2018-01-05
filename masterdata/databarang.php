@@ -25,13 +25,13 @@ if(isset($_POST['input']))
 	if($idkadar=='1') { $kode='BM'; }
 	if($idkadar=='2') { $kode='CTK'; }
 	if($idkadar=='3') { $kode='AYU'; }
-	$id=$kode.$idbaki.$idBarang;
-    
-    $fotobar= explode(".", $_FILES['foto']['name']);  //mengambil nama tanpa extensi
-    $foto_baru = round(microtime(true)) . '.' . end($fotobar); //merename nama secara acak
-    move_uploaded_file($_FILES['foto']['tmp_name'], "../upload/$foto_baru");
+	$data= mysqli_fetch_array(mysqli_query($conn,"select idtoko from user where idUser='$_SESSION[user]'"));
+	$id=$data['idtoko'].$kode.$idbaki.$idBarang;
+	$uploaddir = "/TokoEmas/upload/"; //folder utk upload gambar
+	$uploadfile = $uploaddir.basename($_FILES['foto']['name']); // ./upload/1.jpg
+	$foto = basename($_FILES['foto']['name']); //menyimpan nama + extention
 	
-$q = mysqli_query($conn,"Insert into barang values('$id','$nama_barang','$idbaki','$idkadar','$idjenis_barang','$berat','$foto_baru','L1')") or die(mysql_error());
+$q = mysqli_query($conn,"Insert into barang values('$id','$nama_barang','$idbaki','$idkadar','$idjenis_barang','$berat','$foto','L1')") or die(mysql_error());
 echo "<script>
 alert('Data Sudah Diinputkan');
 window.location='barang.php';

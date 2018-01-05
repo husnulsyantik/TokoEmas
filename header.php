@@ -1,3 +1,6 @@
+<?php
+	include 'koneksi.php';
+?>
 <!DOCTYPE html>
 <html>
   <head>
@@ -50,9 +53,9 @@
               </div>
               <!-- Navbar Menu -->
               <ul class="nav-menu list-unstyled d-flex flex-md-row align-items-md-center">
-			      
+			      <?php if(!empty($_SESSION['user'])) { ?>
                 <!-- Logout    -->
-                <li class="nav-item" ><a href="/TokoEmas/logout.php" class="nav-link logout">Logout<i class="fa fa-sign-out"></i></a></li>
+				  <li class="nav-item" ><a href="/TokoEmas/logout.php" class="nav-link logout">Logout<i class="fa fa-sign-out"></i></a></li><?php } ?>
               </ul>
             </div>
           </div>
@@ -65,13 +68,15 @@
           <div class="sidebar-header d-flex align-items-center">
           
             <div class="title">
-              <h1 class="h4">Husnul Hotimah</h1>
-              <p>Kasir</p>
+              <h1 class="h4">Selamat Datang </h1>
+              <p><?php if(!empty($_SESSION['user'])) { ?> <?php $data=mysqli_fetch_array(mysqli_query($conn,"select * from user JOIN role on user.Role_idRole = role.idRole ")); echo $data[nama_user];?></p><?php } ?>
             </div>
           </div>
           <!-- Sidebar Navidation Menus-->
           <ul class="list-unstyled">
+		
 		   <li class=""> <a href="/TokoEmas/index.php"><i class="fa fa-home"></i>Dasboard</a></li>
+		     <?php if(!empty($_SESSION['user'])) { ?>
              <li ><a href="#dashvariants" aria-expanded="false" data-toggle="collapse"> <i class="fa fa-th-large"></i>Master Data </a>
 			 
               <ul id="dashvariants" class="collapse list-unstyled">
@@ -97,14 +102,16 @@
 				<li><a href="/TokoEmas/transaksi/pinjam1.php">Pinjam</a></li>
                 <li><a href="/TokoEmas/transaksi/reparasi.php">Reparasi</a></li>
                 <li><a href="/TokoEmas/transaksi/cuci.php">Cuci</a></li>
-                <li><a href="/TokoEmas/transaksi/pemesanan.php">Pemesanan</a></li>
+              <li><a href="/TokoEmas/transaksi/pemesanan.php">Pemesanan</a></li>
               </ul>
             </li>
             <li class=""> <a href=""><i class="fa fa-book"></i>Laporan</a></li>
             <li class=""> <a href=""><i class="fa fa-check"></i>Check Up</a></li>
             <li class=""> <a href=""><i class="fa fa-wrench"></i>Options</a></li> 
+			 <?php } ?>
+						  <?php if(empty($_SESSION['user'])) { ?>
 			<li class=""> <a href="/TokoEmas/login.php"><i class="fa fa-user"></i>Login Page</a></li> 
-			
+			  <?php } ?>
           </ul>
         </nav>
 		   

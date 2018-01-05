@@ -1,3 +1,34 @@
+<?php
+	//session_start();
+	include 'koneksi.php';
+
+	if(isset($_POST['input']))
+{
+	session_start();
+	$akun= $_POST['status'];
+    $username = $_POST['nama_user'];
+    $idtoko = $_POST['idtoko'];
+	$idRole = $_POST['idRole'];
+    $password = $_POST['password'];
+    
+    
+    
+    $cek = 'SELECT * FROM user where nama_user="'.$username.'" AND password="'.$password.'"';
+    $sql = mysqli_query($conn, $cek);
+    if(mysqli_num_rows($sql)==1){//jika berhasil akan bernilai 1
+        $c = mysqli_fetch_array($sql);
+        $_SESSION['user'] = $c['idUser'];
+        echo "<script>alert('Anda Berhasil Login'); 
+        window.location='index.php';
+        </script>";
+    } else {
+        echo "<script>alert('Login Gagal'); 
+        window.location='login.php';
+        </script>";
+    }
+}
+	?>
+	
 <!DOCTYPE html>
 <html>
   <head>
@@ -50,26 +81,38 @@
                  
                         
 <div class="navbar-wrapper"></div>
-<h1 >Login Sebagai ?</h1> <br/>
-<div id="closed"></div>
-     <a href="#popup" class="btn btn-primary">Owner</a> 
-    <a href="#popup" class="btn btn-primary">Pengawas Toko</a>
-    <a href="#popup" class="btn btn-primary">Admin</a>
-<div class="popup-wrapper" id="popup">
-	<div class="popup-container">
-		<form action="" method="post" class="popup-form">
-			<h2>Masukan Password Anda</h2>
-			<p><br/>
-			<strong></strong></p>
-			<div class="input-group">
-    <!--    <a><input type="email" name="email" placeholder="Email Address"><br></a>-->
-		<p><input type="password" name="password" placeholder="password"><br></p>
-        <p><input type="submit" value="Submit" name=""><br></p>
+
+
+                  
+                   
+                    <div class="panel-heading" style="background:#796AEE ; color:White">
+                        <h1 class="panel-title"><center><b>LOGIN USER</b></center></h1>
+                    </div>
+                    <div class="card-body">
+                   
+                      <form class="form-horizontal" method="post">
+                        <div class="form-group row">
+                          <label class="col-sm-3 form-control-label">USERNAME</label>
+                          <div class="col-sm-9">
+                            <input id="inputHorizontalSuccess" name="nama_user" type="text" class="form-control form-control-success">
+                          </div>
+                        </div>
+                        <div class="form-group row">
+                          <label class="col-sm-3 form-control-label">PASSWORD</label>
+                          <div class="col-sm-9">
+                            <input id="inputHorizontalWarning" name="password" type="password" class="form-control form-control-warning">
+                          </div>
+                        </div>
+						
+                        <div class="form-group row">       
+                          <div class="col-sm-9 offset-sm-3">
+                            <input type="submit" name="input" value="&nbsp;&nbsp;LOGIN&nbsp;&nbsp;" class="btn btn-primary">
+                          </div>
+                        </div>
+                      </form>
+                    </div>
+                 
                 
-			</div>
-		</form>
-		<a class="popup-close" href="#closed">X</a>
-	</div>
 </div>
 
          </div>      
