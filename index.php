@@ -1,5 +1,8 @@
-<!DOCTYPE html>
-<html>
+<?php
+
+include "koneksi.php";
+?>
+
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -59,23 +62,41 @@ include "header.php"
                         <div class="card-close">
                          </div>
                     <div class="card"><br>
-                <h1> <strong><center> Grafik Perkembangan Harga Emas per Bulan</center><br></strong></h1>
+                <h1> <strong><center> Grafik penjualan</center><br></strong></h1>
                 <canvas id="myChart" width="1070px" height="300"></canvas>
                     </div>
                 </div>
                 </div>
-            </div>
-            <script>
+            </div>  
+              
+        
+             <!-- GRAFIK-->
+              <div class="container">
+              
+                <script>
                 var ctx = document.getElementById("myChart");
                 var myChart = new Chart(ctx, {
-                    type: 'line',
+                    type: 'bar',
                     data: {
-                        labels: ["Januari", "Februari", "Maret", "April", "Mei", "Juni", "Juli", "Agustus", "Oktober", "November", "Desember"],
-    //                    labels: [<?php //while ($b = mysqli_fetch_array($bulan)) { echo '"' . $b['bulan'] . '",';}?>],
+                        labels: [<?php
+                                            $query = mysqli_query($conn,"SELECT * FROM penjualan group by month(tanggal_penjualan) ");
+                                            
+                                                while($data = mysqli_fetch_array($query)){
+                                                    
+                                                    echo substr ($data['tanggal_penjualan'],5,2).",";
+                                                }
+                                      ?>],
+   
                         datasets: [{
                                 label: 'Daerah Perubahan Harga',
-                                data: [100000, 120000, 130000, 90000, 140000, 180000, 200000, 110000, 150000, 250000, 120000, 160000],
-    //                            data: [<?php //while ($p = mysqli_fetch_array($penghasilan)) { echo '"' . $p['hasil_penjualan'] . '",';}?>],
+                                data: [ 
+                                    <?php
+                                           $query = mysqli_query($conn,"SELECT sum(harga_gram) as jum FROM penjualan group by month(tanggal_penjualan) ");
+                                    while($data = mysqli_fetch_array($query)){
+                                                    echo $data['jum'].",";
+                                                }
+                                      ?> ],
+   
                                 backgroundColor: [
     //                                'rgba(255, 99, 132, 0.2)',
                                     'rgba(54, 162, 235, 0.2)',
@@ -106,6 +127,91 @@ include "header.php"
                     }
                 });
             </script>
+                  </div>
+              <!-- GRAFIK-->
+        </section>
+              
+              
+              <section class="forms">  
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="card-close">
+                         </div>
+                    <div class="card"><br>
+                <h1> <strong><center> Grafik Perkembangan Harga Emas per Bulan</center><br></strong></h1>
+                <canvas id="myChart" width="1070px" height="300"></canvas>
+                    </div>
+                </div>
+                </div>
+            </div>
+              
+              
+             
+              
+              <div class="container">
+              
+              
+            <script>
+                var ctx1= document.getElementById("myChart1");
+                var myChart1 = new Chart(ctx1, {
+                    type: 'line',
+                    data: {
+                        labels: [<?php
+                                            $query = mysqli_query($conn,"SELECT * FROM penjualan");
+                                            ;
+                                                while($data = mysqli_fetch_array($query)){
+                                                    echo $data['berat_now'].",";
+                                                }
+                                      ?>],
+    //                    labels: [<?php //while ($b = mysqli_fetch_array($bulan)) { echo '"' . $b['bulan'] . '",';}?>],
+                        datasets: [{
+                                label: 'Daerah Perubahan Harga',
+                                data: [ 
+                                    <?php
+                                            $query = mysqli_query($conn,"SELECT * FROM penjualan");
+                                            ;
+                                                while($data = mysqli_fetch_array($query)){
+                                                    echo $data['harga_gram'].",";
+                                                }
+                                      ?> ],
+    //                            data: [<?php //while ($p = mysqli_fetch_array($penghasilan)) { echo '"' . $p['hasil_penjualan'] . '",';}?>],
+                                backgroundColor: [
+    //                                'rgba(255, 99, 132, 0.2)',
+                                    'rgba(54, 162, 235, 0.2)',
+                                    'rgba(255, 206, 86, 0.2)',
+                                    'rgba(75, 192, 192, 0.2)',
+                                    'rgba(153, 102, 255, 0.2)',
+                                    'rgba(255, 159, 64, 0.2)'
+                                ],
+                                borderColor: [
+    //                                'rgba(255,99,132,1)',
+                                    'rgba(54, 162, 235, 1)',
+                                    'rgba(255, 206, 86, 1)',
+                                    'rgba(75, 192, 192, 1)',
+                                    'rgba(153, 102, 255, 1)',
+                                    'rgba(255, 159, 64, 1)'
+                                ],
+                                borderWidth: 1
+                            }]
+                    },
+                    options: {
+                        scales: {
+                            yAxes: [{
+                                    ticks: {
+                                        beginAtZero: true
+                                    }
+                                }]
+                        }
+                    }
+                });
+              
+                
+            </script>
+                  </div>
+              
+              
+            
               
             <div class="container-fluid">
               <div class="row">
@@ -157,4 +263,3 @@ include "header.php"
     <script src="js/charts-home.js"></script>
     <script src="js/front.js"></script>
   </body>
-</html>
