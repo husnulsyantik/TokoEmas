@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: 05 Jan 2018 pada 08.11
+-- Generation Time: 05 Jan 2018 pada 08.50
 -- Versi Server: 10.1.19-MariaDB
 -- PHP Version: 7.0.13
 
@@ -94,6 +94,7 @@ CREATE TABLE `barang` (
   `idkadar` int(11) NOT NULL,
   `idjenis_barang` varchar(3) NOT NULL,
   `berat` decimal(5,0) DEFAULT NULL,
+  `stok` int(8) NOT NULL,
   `foto` varchar(50) NOT NULL,
   `idtoko` varchar(4) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -102,9 +103,29 @@ CREATE TABLE `barang` (
 -- Dumping data untuk tabel `barang`
 --
 
-INSERT INTO `barang` (`idBarang`, `nama_barang`, `idbaki`, `idkadar`, `idjenis_barang`, `berat`, `foto`, `idtoko`) VALUES
-('AYU1A002', '233', '1A', 3, 'A', '6', '1515123191.jpg', 'L1'),
-('CTK1A001', 'Kalung Bro', '1A', 1, 'A', '150', '1515025128.jpg', 'L1');
+INSERT INTO `barang` (`idBarang`, `nama_barang`, `idbaki`, `idkadar`, `idjenis_barang`, `berat`, `stok`, `foto`, `idtoko`) VALUES
+('AYU1A002', '233', '1A', 3, 'A', '6', 0, '1515123191.jpg', 'L1'),
+('CTK1A001', 'Kalung Bro', '1A', 1, 'A', '150', 0, '1515025128.jpg', 'L1');
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `detail_barang`
+--
+
+CREATE TABLE `detail_barang` (
+  `id_detail` varchar(11) NOT NULL,
+  `tanggal` date NOT NULL,
+  `idBarang` varchar(12) NOT NULL,
+  `idBaki` char(4) NOT NULL,
+  `idkadar` int(11) NOT NULL,
+  `idjenis_barang` varchar(3) NOT NULL,
+  `stok_awal` int(8) NOT NULL,
+  `stok_tambah` int(8) NOT NULL,
+  `stok_kurang` int(8) NOT NULL,
+  `stik_akhir` int(8) NOT NULL,
+  `idUser` varchar(10) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -382,6 +403,17 @@ ALTER TABLE `barang`
   ADD KEY `idtoko` (`idtoko`);
 
 --
+-- Indexes for table `detail_barang`
+--
+ALTER TABLE `detail_barang`
+  ADD PRIMARY KEY (`id_detail`),
+  ADD KEY `idBarang` (`idBarang`),
+  ADD KEY `idkadar` (`idkadar`),
+  ADD KEY `idBaki` (`idBaki`),
+  ADD KEY `idjenis_barang` (`idjenis_barang`),
+  ADD KEY `idUser` (`idUser`);
+
+--
 -- Indexes for table `harga`
 --
 ALTER TABLE `harga`
@@ -507,6 +539,16 @@ ALTER TABLE `barang`
   ADD CONSTRAINT `fk_Barang_Baki1` FOREIGN KEY (`idbaki`) REFERENCES `baki` (`idBaki`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   ADD CONSTRAINT `fk_Barang_Kadar1` FOREIGN KEY (`idkadar`) REFERENCES `kadar` (`idkadar`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   ADD CONSTRAINT `fk_Barang_jenis_barang1` FOREIGN KEY (`idjenis_barang`) REFERENCES `jenis_barang` (`idjenis_barang`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+--
+-- Ketidakleluasaan untuk tabel `detail_barang`
+--
+ALTER TABLE `detail_barang`
+  ADD CONSTRAINT `detail_barang_ibfk_1` FOREIGN KEY (`idBarang`) REFERENCES `barang` (`idBarang`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `detail_barang_ibfk_2` FOREIGN KEY (`idkadar`) REFERENCES `kadar` (`idkadar`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `detail_barang_ibfk_3` FOREIGN KEY (`idjenis_barang`) REFERENCES `jenis_barang` (`idjenis_barang`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `detail_barang_ibfk_4` FOREIGN KEY (`idUser`) REFERENCES `user` (`idUser`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `detail_barang_ibfk_5` FOREIGN KEY (`idBaki`) REFERENCES `baki` (`idBaki`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Ketidakleluasaan untuk tabel `harga`
