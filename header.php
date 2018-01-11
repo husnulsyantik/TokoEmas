@@ -61,12 +61,12 @@
           </div>
         </nav>
       </header>
-      <div class="page-content d-flex align-items-stretch"> 
+      <div class="page-content d-flex align-items-stretch">
         <!-- Side Navbar -->
         <nav class="side-navbar">
           <!-- Sidebar Header-->
           <div class="sidebar-header d-flex align-items-center">
-          
+
             <div class="title">
               <h1 class="h4">Selamat Datang </h1>
               <p><?php if(!empty($_SESSION['user'])) { ?> <?php $data=mysqli_fetch_array(mysqli_query($conn,"select * from user JOIN role on user.Role_idRole = role.idRole ")); echo $data[nama_user];?></p><?php } ?>
@@ -74,21 +74,22 @@
           </div>
           <!-- Sidebar Navidation Menus-->
           <ul class="list-unstyled">
-		
+
 		   <li class=""> <a href="/TokoEmas/index.php"><i class="fa fa-home"></i>Dasboard</a></li>
 		     <?php if(!empty($_SESSION['user'])) { ?>
              <li ><a href="#dashvariants" aria-expanded="false" data-toggle="collapse"> <i class="fa fa-th-large"></i>Master Data </a>
-			 
+
               <ul id="dashvariants" class="collapse list-unstyled">
-				
-              				
+
+
                 <li><a href="/TokoEmas/masterdata/sales2.php">Sales</a></li>
 				<li><a href="/TokoEmas/masterdata/barang.php">Data Barang</a></li>
+				<li><a href="/TokoEmas/masterdata/datajenisbarang.php">Data Jenis Barang</a></li>
               </ul>
             </li>
 			   <li ><a href="#dashvariants2" aria-expanded="false" data-toggle="collapse"> <i class="fa fa-th-list"></i>Transaksi </a>
               <ul id="dashvariants2" class="collapse list-unstyled">
-			  
+
                 <li><a href="/TokoEmas/transaksi/pengeluaran-1.php">Pengeluaran</a></li>
                 <li><a href="/TokoEmas/transaksi/penjualan1.php">Penjualan</a></li>
 				<li><a href="/TokoEmas/transaksi/pinjam1.php">Pinjam</a></li>
@@ -99,21 +100,21 @@
             </li>
            <li ><a href="#dashvariants4" aria-expanded="false" data-toggle="collapse"> <i class="fa fa-book"></i>Laporan </a>
               <ul id="dashvariants4" class="collapse list-unstyled">
-			  
+
                 <li><a href="/TokoEmas/laporan/lap_penjualan.php">Lap. Penjualan</a></li>
               </ul>
             </li>
             <li class=""> <a href=""><i class="fa fa-check"></i>Check Up</a></li>
-            <li class=""> <a href=""><i class="fa fa-wrench"></i>Options</a></li> 
+            <li class=""> <a href=""><i class="fa fa-wrench"></i>Options</a></li>
 			 <?php } ?>
 			  <?php if(empty($_SESSION['user'])) { ?>
-			<li class=""> <a href="/TokoEmas/login.php"><i class="fa fa-user"></i>Login Page</a></li> 
+			<li class=""> <a href="/TokoEmas/login.php"><i class="fa fa-user"></i>Login Page</a></li>
 			  <?php } ?>
           </ul>
         </nav>
-		   
+
         <div class="content-inner">
-                
-   
+
+
   </body>
 </html>
