@@ -34,7 +34,7 @@ window.location='barang.php';
 
                          <div class="card-body">
 						<div class="col-sm-4 offset-sm-10">
-						 <a href="/TokoEmas/masterdata/jenisbarang.php"><button type="button" class="btn btn-primary">Tambah Jenis Barang</button></a></div><br>
+						 <a href="/TokoEmas/masterdata/editjenisbarang.php?update=0"><button type="button" class="btn btn-primary">Tambah Jenis Barang</button></a></div><br>
                       <table class="table table-striped table-hover" id="tabel_data">
                         <thead>
 						<th>No.</th>
