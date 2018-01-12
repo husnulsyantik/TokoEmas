@@ -4,10 +4,12 @@
 
 	if(isset($_GET['del']))
 {
-	mysqli_query($conn,"DELETE FROM jenis_barang WHERE idjenis_barang = '$_GET[del]'");
+	$query = "DELETE FROM jenis_barang WHERE idjenis_barang = '$_GET[del]'";
+	echo "$query";
+	mysqli_query($conn,$query);
 	echo "<script>
 alert('Data Sudah Dihapus');
-window.location='barang.php';
+window.location='datajenisbarang.php';
 </script>";
 	}
 ?>
@@ -58,7 +60,7 @@ window.location='barang.php';
                               <td><?php echo $data['singkatan']?></td>
 
 							  <td><a href="editjenisbarang.php?update=<?php echo $data['idjenis_barang']; ?>"><img src="/TokoEmas/img/edit.png" width="35" height="35"></a>&nbsp;
-						<a href="?del=<?php echo $data['idBarang']; ?>"><img src="/TokoEmas/img/hapus.png" width="30" height="30"></a> </td>
+						<a href="?del=<?php echo $data['idjenis_barang']; ?>"><img src="/TokoEmas/img/hapus.png" width="30" height="30"></a> </td>
 
                           </tr>
                           <?php } ?>

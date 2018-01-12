@@ -1,13 +1,13 @@
 <?php
 	include '../koneksi.php';
-	if(isset($_POST['update']))
+	if(isset($_POST['input']))
 	{
 
 		$idjenis_barang=$_POST['id_jenis'];
 		$nama_jenis_barang=$_POST['nama_jenis_barang'];
 		$singkatan=$_POST['singkatan'];
 
-		$query = "update jenis_barang set nama_jenis_barang='$nama_jenis_barang',singkatan='$singkatan' where idjenis_barang='$idjenis_barang'";
+		$query = "insert into jenis_barang(idjenis_barang,nama_jenis_barang,singkatan) values ('$idjenis_barang','$nama_jenis_barang','$singkatan')";
 		echo "$idjenis_barang";
 		echo $query;
 	$q = mysqli_query($conn,$query) or die(mysql_error());
@@ -17,7 +17,7 @@
 	</script>";
 
 	}
-	else if(isset($_POST['input'])){
+	else if(isset($_POST['update'])){
 		$idjenis_barang=$_POST['id_jenis'];
 		$nama_jenis_barang=$_POST['nama_jenis_barang'];
 		$singkatan=$_POST['singkatan'];
@@ -109,14 +109,14 @@
 										 $id = $_GET['update'];
 										 if($id=='0'){
 											 { ?>
-												 <input type="submit" value="Insert" name="Insert" class="btn btn-primary" name="insert">
+												 <input type="submit" value="Insert" name="input" class="btn btn-primary">
 					 <!--								echo "<option value=$jenis2[id_jenisbarang]>$jenis2[singkatan]($jenis2[nama_jenis_barang])</option>";-->
 												 <?php	}
 
 										 }
 										 else if($id!='0'){
 											 { ?>
-												  <input type="submit" value="Update" name="Update" class="btn btn-primary" name="input">
+												  <input type="submit" value="Update" name="update" class="btn btn-primary">
 					 <!--								echo "<option value=$jenis2[id_jenisbarang]>$jenis2[singkatan]($jenis2[nama_jenis_barang])</option>";-->
 												 <?php	}
 										 }
