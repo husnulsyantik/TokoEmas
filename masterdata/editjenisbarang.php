@@ -19,17 +19,9 @@
                  <div class="col-lg-12">
                   <div class="card">
                     <div class="card-close">
-                    <?php
-                        $id=$_GET["update"];
-                        $query = mysqli_query($conn,"SELECT * FROM jenis_barang where idjenis_barang=$id");
-                        echo mysqli_fetch_lengths($query);
-                        while($data = mysqli_fetch_array($query)) {
-                        echo $data['idjenis_barang'];
-                        }
-                        ?>
+
                     </div>
                       <div class="card-body">
-                      <form class="form-horizontal" method="post"> <!-- pembuatan form -->
                     <div class="form-group row">
                       <label class="col-sm-3 form-control-label">Id Jenis Barang </label> <!-- pembuatan label form -->
                       <div class="col-sm-6">
