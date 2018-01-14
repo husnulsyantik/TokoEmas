@@ -1,6 +1,16 @@
 <?php
 include "../header.php";
 include "../koneksi.php";
+if(isset($_GET['del']))
+{
+$query = "DELETE FROM toko WHERE idToko = '$_GET[del]'";
+echo "$query";
+mysqli_query($conn,$query);
+echo "<script>
+alert('Data Sudah Dihapus');
+window.location='tambah_toko.php';
+</script>";
+}
 ?>
 
  <header class="page-header">
@@ -13,19 +23,19 @@ include "../koneksi.php";
             <div class="container-fluid">
               <div class="row bg-white has-shadow">
                 <!-- Item -->
-                
-                  
-                 
+
+
+
                   <div class="col-lg-12">
                   <form class="form-horizontal">
 				 <div class="form-group">
 				   <div class="col-sm-5 offset-sm-6">
-                          
+
 							</div>
-						
+
                       </div>
                       </form></div>
-                  
+
                     <div class="card-body">
                       <table class="table table-striped table-hover" id="tabel_data">
                         <thead>
@@ -33,26 +43,30 @@ include "../koneksi.php";
                             <th>Nama</th>
                             <th>Alamat</th>
                             <th>Telepon</th>
-                          
+                            <th>Aksi</th>
+
                         </thead>
                         <tbody>
                              <?php
                  $query = mysqli_query($conn,"SELECT * FROM toko");
                  while($data = mysqli_fetch_array($query)){
               ?>
-                           
+
                           <tr>
-                              
+
                               <td><?php echo $data['idToko']?></td>
                               <td><?php echo $data['Nama_Toko']?></td>
                               <td><?php echo $data['Alamat']?></td>
                               <td><?php echo $data['No_tlp']?></td>
-        
-                                                       
+                              <td><a href="EditDataToko.php?update=<?php echo $data['idToko']; ?>"><img src="/TokoEmas/img/edit.png" width="35" height="35"></a>&nbsp;
+              						<a href="?del=<?php echo $data['idToko']; ?>"><img src="/TokoEmas/img/hapus.png" width="30" height="30"></a> </td>
+
+
+
                           </tr>
                           <?php } ?>
-                        </tbody> 
-                          
+                        </tbody>
+
                       </table>
                          <div class="line"></div>
                         <div class="form-group row">
@@ -94,8 +108,8 @@ include "../koneksi.php";
                                     <input type="text" name="No_Tlp" class="form-control form-control-success">
                                   </div>
                                 </div>
-                                  
-                            
+
+
                             <div class="modal-footer">
                               <button type="button" data-dismiss="modal" class="btn btn-secondary">Close</button>
                               <button type="submit" class="btn btn-primary" name="simpantoko">Save changes</button>
@@ -111,11 +125,11 @@ include "../koneksi.php";
                         </div>
                     </div>
 </section>
-                  
-                
+
+
           <!-- form sales    -->
 
-                 
+
 <?php
 include "../footer.php"
 ?>

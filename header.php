@@ -85,6 +85,8 @@
                 <li><a href="/TokoEmas/masterdata/sales2.php">Sales</a></li>
 				<li><a href="/TokoEmas/masterdata/barang.php">Data Barang</a></li>
 				<li><a href="/TokoEmas/masterdata/datajenisbarang.php">Data Jenis Barang</a></li>
+				<li><a href="/TokoEmas/masterdata/tambah_toko.php">Data Toko</a></li>
+				<li><a href="/TokoEmas/masterdata/baki.php">Data Baki</a></li>
               </ul>
             </li>
 			   <li ><a href="#dashvariants2" aria-expanded="false" data-toggle="collapse"> <i class="fa fa-th-list"></i>Transaksi </a>
